@@ -99,7 +99,7 @@ Here we need to explain two thing about how the buses work in LAPILU:
 
 ### Register X and Y
 
-This are only general purpose N Bit registers, the main purpose of them is that the programmers could use them to store data.
+This are only general purpose N Bit registers, the main purpose is that the programmers could use them to store data.
 
 ### Acumulator
 
@@ -129,24 +129,24 @@ It holds the value for the B operand of the ALU
 
 The program counter is the module that keeps track of what instruction we are going to execute, <b>LAPILU assumes that your first intruction to execute is in memory address 0</b>.
 
-In LAPILU the program counter is split in 2 halfs LOW and HIGH both N size 
-so the size of the complete program counter is ALWAYS 2 times N 
+In LAPILU, the program counter is split in 2 halfs, LOW and HIGH (both N size) 
+the size of the complete program counter is ALWAYS 2 times N, 
 thats why the <b>maximum</b> length of the address bus (M) is 2N, because 2N is the maximum number the program counter can count.
 <br>
-When the program counter needs to output its data to the address bus it wil output the M less significant bits if M is less than 2N. 
+When the program counter needs to output its data to the address bus, it will output the M less significant bits if M is less than 2N. 
 
 ### Memory address register
 
-The porpouse of this module is to store a memory address that can be output to the address bus, however this register is not directly 
+The purpose of this module is to store a memory address that can be output to the address bus, however this register is not directly 
 available to the programmer, but is used internally for the execution of the instructions.
 
 ### Stack pointer register
 
-The porpouse of this register is to store the value of the pointer to the stack.
+The purpose of this register is to store the value of the pointer to the stack.
 
 <b>But how the stack and the stack pointer works in LAPILU?</b>
 
-Well as you can see in the architecture diagram, <b> the stack pointer is only N bits long but its porpouse is to save a memory address and
+Well as you can see in the architecture diagram, <b> the stack pointer is only N bits long but its purpose is to save a memory address and
 that could be M bits long and M could be between N and 2N</b> so, how it works?
 
 The answer is easy, the remaining most significant bits are assumed as 1 so for example, 
@@ -159,19 +159,19 @@ the same rules applies to every other configuration of the buses.
 
 ### Step counter
 
-A single machine languaje o assembly instruction could need several steps to complete, the porpouse of the step counter is to
+A single machine languaje o assembly instruction could need several steps to complete, the purpose of the step counter is to
 determine wich step of the instruction is been executed
 
 ### Instruction register
 
-The porpouse of these register is to hold the binary representation of the execution we are currently executing and make it available to
+The purpose of these register is to hold the binary representation of the execution we are currently executing and make it available to
 the instruction decoder so it can handle it.
 
 This register has a fixed size of 8 bits, thats why the minimum size of the data bus needs to be 8.
 
 ### Processor status register
 
-The porpouse of this register is to hold the current status of the processor (also known as processor flags).
+The purpose of this register is to hold the current status of the processor (also known as processor flags).
 <br>
 It is composed as follows.
 <br>
@@ -192,13 +192,13 @@ Let's explain the meaning of every flag
 
 ### Instruction decoder
 
-Its porpouse is to receive the inputs from the status register,  the instruction register, and the step counter and control all 
+Its purpose is to receive the inputs from the status register,  the instruction register, and the step counter to control 
 the rest of the modules as the current instruction dictates.
 <br>
 But how does it work?
 <br>
 Well is just an enormous truth table that takes as input the signals from the status register,  the instruction register, and the step counter
-and outputs an specific set of control signals to the diferent modules in the CPU in each clock cicle.
+and outputs an specific set of control signals to the different modules in the CPU in each clock cicle.
 <br>
 <br>
 The control signals that LAPILU has are the following: 
@@ -226,7 +226,7 @@ As you can see, it is not complete yet, we are currently working on that, we are
 
 <b>The addressing modes</b> 
 
-LAPILU offers the following addresing modes:
+LAPILU offers the following addressing modes:
 
 <ol>
   <li>
@@ -296,10 +296,10 @@ At this point we already finished the overview of the project, now more question
   </li>
 </ul>
 
-## Finally Why the name of "LAPILU"?
+## Finally, Why the name of "LAPILU"?
   Well thats quite simple, one of our members (Lizbeth) has a dog named Vilu, 
   but normally we call her Pilu, we are from Mexico, 
-  so sometimes we refer to the dog as La Pilu, the name is simply her name
+  so sometimes we refer to the dog as "La Pilu", the name is simply her name
   <br>
   <br>
   <img src="https://github.com/millocorona/LAPILU-SimpleSoftCoreMicroProcessorUnit/blob/master/LAPILU-SimpleSoftCoreMicroProcessorUnit.docs/20191117_135857.jpg">
