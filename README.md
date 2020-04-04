@@ -27,9 +27,6 @@ designed to be as simple as possible, aiming to be easy to understand for studen
  
 ## What is a soft-core microprocessor?
 
-From <a href="https://en.wikipedia.org/wiki/Soft_microprocessor">Wikipedia</a>:
-<br>
-
 <i>A soft microprocessor (also called softcore microprocessor or a soft processor) is a microprocessor core that can be wholly implemented 
 using logic synthesis. It can be implemented via different semiconductor devices containing programmable logic (e.g., ASIC, FPGA, CPLD).</i>
  
