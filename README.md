@@ -103,7 +103,7 @@ This are only general purpose N Bit registers, the main purpose is that the prog
 
 ### Acumulator
 
-It holds the value for the A operand of the ALU and also holds the ALU puts the result in there after an operation is completed
+It holds the value for the A operand of the ALU and also the ALU puts the result in there after an operation is completed
 
 ### ALU
 
@@ -164,8 +164,8 @@ determine wich step of the instruction is been executed
 
 ### Instruction register
 
-The purpose of these register is to hold the binary representation of the execution we are currently executing and make it available to
-the instruction decoder so it can handle it.
+The purpose of these register is to hold the binary representation of the instruction 
+we are currently executing and make it available to the instruction decoder so it can handle it.
 
 This register has a fixed size of 8 bits, thats why the minimum size of the data bus needs to be 8.
 
