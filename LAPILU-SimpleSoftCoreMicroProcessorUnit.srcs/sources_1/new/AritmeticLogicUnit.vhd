@@ -10,16 +10,16 @@
 -- Tool Versions: Vivado 2019.2
 -- Description: N-bits Aritmetic logic unit with 13 operations; 
 --
---      SUM                                                0000 
---      SUBSTRACTION                                       0001
---      INCREMENT BY 1                                     0010  
---      BITWISE OR                                         0011 
---      BITWISE AND                                        0100
---      BITWISE NOT                                        0101
---      BITWISE XOR                                        0110
---      ROTATE THROUGH CARRY TO LEFT                       0111
---      ROTATE THROUGH CARRY TO RIGHT                      1000
---      DECREMENT BY 1                                     1001  
+--      SUM                                                0001 
+--      SUBSTRACTION                                       0010
+--      INCREMENT BY 1                                     0011  
+--      BITWISE OR                                         0100 
+--      BITWISE AND                                        0101
+--      BITWISE NOT                                        0110
+--      BITWISE XOR                                        0111
+--      ROTATE THROUGH CARRY TO LEFT                       1000
+--      ROTATE THROUGH CARRY TO RIGHT                      1001
+--      DECREMENT BY 1                                     1010  
 --      TRANSFER                                           OTHERS
 -- Dependencies: 
 -- 
@@ -119,46 +119,46 @@ begin
             );
     process (OPERATION) begin
         case OPERATION is
-            when "0000" => --SUM
+            when "0001" => --SUM
                 ADDER_CARRY_IN<=CARRY_IN;
                 ADDER_B_OPERAND<=B_OPERAND;
                 RESULT_BUFFER<=ADDER_RESULT;
                 CARRY_OUT_BUFFER<=ADDER_CARRY_OUT;              
                 OVERFLOW_BUFFER <= not (((A_OPERAND(LENGTH-1) nor ADDER_B_OPERAND(LENGTH-1)) and ADDER_CARRY_PENULTIMATE_BIT) nor ((A_OPERAND(LENGTH-1) nand ADDER_B_OPERAND(LENGTH-1)) nor ADDER_CARRY_PENULTIMATE_BIT));
-            when "0001" => --SUB
+            when "0010" => --SUB
                 ADDER_CARRY_IN<='1';
                 ADDER_B_OPERAND<=not B_OPERAND;
                 RESULT_BUFFER<=ADDER_RESULT;
                 CARRY_OUT_BUFFER<=ADDER_CARRY_OUT;              
                 OVERFLOW_BUFFER <= not (((A_OPERAND(LENGTH-1) nor ADDER_B_OPERAND(LENGTH-1)) and ADDER_CARRY_PENULTIMATE_BIT) nor ((A_OPERAND(LENGTH-1) nand ADDER_B_OPERAND(LENGTH-1)) nor ADDER_CARRY_PENULTIMATE_BIT));                
-            when "0010" =>--INC
+            when "0011" =>--INC
                 --Operation
                 ADDER_CARRY_IN<='1';
                 ADDER_B_OPERAND<= STD_LOGIC_VECTOR(TO_UNSIGNED(0,LENGTH));
                 RESULT_BUFFER<=ADDER_RESULT;
                 CARRY_OUT_BUFFER<=ADDER_CARRY_OUT;              
                 OVERFLOW_BUFFER <= not (((A_OPERAND(LENGTH-1) nor ADDER_B_OPERAND(LENGTH-1)) and ADDER_CARRY_PENULTIMATE_BIT) nor ((A_OPERAND(LENGTH-1) nand ADDER_B_OPERAND(LENGTH-1)) nor ADDER_CARRY_PENULTIMATE_BIT));            
-            when "0011" => --OR
+            when "0100" => --OR
                 LOGIC_RESULT<=A_OPERAND or B_OPERAND;
                 RESULT_BUFFER<=LOGIC_RESULT;
                 CARRY_OUT_BUFFER<='0';             
                 OVERFLOW_BUFFER <='0';
-            when "0100" => -- AND
+            when "0101" => -- AND
                 LOGIC_RESULT<=A_OPERAND and B_OPERAND;
                 RESULT_BUFFER<=LOGIC_RESULT;
                 CARRY_OUT_BUFFER<='0';             
                 OVERFLOW_BUFFER <='0';     
-            when "0101" => --NOT
+            when "0110" => --NOT
                 LOGIC_RESULT <= not A_OPERAND ;
                 RESULT_BUFFER<=LOGIC_RESULT;
                 CARRY_OUT_BUFFER<='0';             
                 OVERFLOW_BUFFER <='0';
-            when "0110" => --XOR
+            when "0111" => --XOR
                 LOGIC_RESULT<=A_OPERAND xor B_OPERAND;
                 RESULT_BUFFER<=LOGIC_RESULT;
                 CARRY_OUT_BUFFER<='0';             
                 OVERFLOW_BUFFER <='0';                                     
-            when "0111" => --RCL
+            when "1000" => --RCL
                 LOGIC_RESULT(0)<=CARRY_IN;
                 for i in 1 to LENGTH-1 loop 
                     LOGIC_RESULT(i) <= A_OPERAND(i-1);  
@@ -166,7 +166,7 @@ begin
                 RESULT_BUFFER<=LOGIC_RESULT;
                 CARRY_OUT_BUFFER<=A_OPERAND(LENGTH-1);             
                 OVERFLOW_BUFFER <='0';                             
-            when "1000" => --RCR
+            when "1001" => --RCR
                 LOGIC_RESULT(LENGTH-1)<=CARRY_IN;
                 for i in 0 to LENGTH-2 loop 
                     LOGIC_RESULT(i) <= A_OPERAND(i+1);  
@@ -174,7 +174,7 @@ begin
                 RESULT_BUFFER<=LOGIC_RESULT;
                 CARRY_OUT_BUFFER<=A_OPERAND(0);             
                 OVERFLOW_BUFFER <='0'; 
-            when "1001" => --DEC
+            when "1010" => --DEC
                  --Operation
                 ADDER_CARRY_IN<='1';
                 ADDER_B_OPERAND<=not (STD_LOGIC_VECTOR(TO_UNSIGNED(0,LENGTH-1))&'1');
