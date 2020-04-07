@@ -125,13 +125,14 @@ architecture LAPILU_Architecture of LAPILU is
     --Step counter signals
     signal CONTROL_SIGNAL_STEP_COUNTER_RESET                                                                              : std_logic;
     signal CONTROL_SIGNAL_STEP_COUNTER_ENABLE                                                                             : std_logic;
-    signal CONTROL_SIGNAL_STEP_COUNTER_INPUT_FROM_DATA_BUS                                                                : std_logic;
-    signal CONTROL_SIGNAL_STEP_COUNTER_OUTPUT_TO_DATA_BUS                                                                 : std_logic;
     
     --Interconections (OUT) from module
     signal INTERCONECT_STEP_COUNTER_OUT_TO_INSTRUCTION_DECODER_IN                                                         : std_logic_vector (3 downto 0);
 
     --Stack pointer signals
+    signal CONTROL_SIGNAL_STACK_POINTER_INCREMENT	                                                                      : std_logic;
+    signal CONTROL_SIGNAL_STACK_POINTER_DECREMENT                                                                         : std_logic;
+
     signal CONTROL_SIGNAL_STACK_POINTER_LOAD_FROM_DATA_BUS                                                                : std_logic;
     signal CONTROL_SIGNAL_STACK_POINTER_OUTPUT_TO_DATA_BUS                                                                : std_logic;
     signal CONTROL_SIGNAL_STACK_POINTER_OUTPUT_TO_ADDRESS_BUS                                                             : std_logic;
@@ -291,14 +292,7 @@ begin
             port map(
                 CLOCK=>INVERTED_CLOCK_SIGNAL,
                 RESET=> CONTROL_SIGNAL_STEP_COUNTER_RESET,
-                COUNT_ENABLE=> CONTROL_SIGNAL_STEP_COUNTER_ENABLE,
-                
-                INPUT_ENABLE_DATA_BUS=> CONTROL_SIGNAL_STEP_COUNTER_INPUT_FROM_DATA_BUS,
-                DATA_BUS_INPUT => DATA_BUS_SIGNAL,
-                
-                OUTPUT_ENABLE_DATA_BUS => CONTROL_SIGNAL_STEP_COUNTER_OUTPUT_TO_DATA_BUS,
-                DATA_BUS_OUTPUT => STEP_COUNTER_DATA_BUS_OUTPUT,
-               
+                COUNT_ENABLE=> CONTROL_SIGNAL_STEP_COUNTER_ENABLE,               
                 INSTRUCTION_DECODER_OUTPUT => INTERCONECT_STEP_COUNTER_OUT_TO_INSTRUCTION_DECODER_IN
             );
      
@@ -364,6 +358,9 @@ begin
                 CLOCK => CLOCK,
                 RESET => CPU_RESET, 
                 
+                INCREMENT_STACK_POINTER=> CONTROL_SIGNAL_STACK_POINTER_INCREMENT,
+                DECREMENT_STACK_POINTER=> CONTROL_SIGNAL_STACK_POINTER_DECREMENT,
+                
                 LOAD_FROM_DATA_BUS => CONTROL_SIGNAL_STACK_POINTER_LOAD_FROM_DATA_BUS,
                 DATA_INPUT_FROM_DATA_BUS => DATA_BUS_SIGNAL,
                 
@@ -407,7 +404,6 @@ begin
              CONTROL_SIGNAL_Y_REGISTER_OUTPUT_ENABLE,
              CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_LOW_TO_DATA_BUS,
              CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_HIGH_TO_DATA_BUS,
-             CONTROL_SIGNAL_STEP_COUNTER_OUTPUT_TO_DATA_BUS,
              CONTROL_SIGNAL_PROCESSOR_STATUS_REGISTER_OUTPUT_ENABLE_TO_DATA_BUS,
              CONTROL_SIGNAL_STACK_POINTER_OUTPUT_TO_DATA_BUS,
              CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_MEMORY_ADDRESS_REGISTER_LOW_TO_DATA_BUS,
@@ -427,8 +423,6 @@ begin
                 DATA_BUS_SIGNAL<=REGISTER_Y_DATA_BUS_OUTPUT;
             elsif (CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_LOW_TO_DATA_BUS = '1' or CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_HIGH_TO_DATA_BUS = '1') then
                 DATA_BUS_SIGNAL<=PROGRAM_COUNTER_DATA_BUS_OUTPUT;
-            elsif (CONTROL_SIGNAL_STEP_COUNTER_OUTPUT_TO_DATA_BUS = '1') then
-                DATA_BUS_SIGNAL<=STEP_COUNTER_DATA_BUS_OUTPUT;
             elsif (CONTROL_SIGNAL_PROCESSOR_STATUS_REGISTER_OUTPUT_ENABLE_TO_DATA_BUS = '1') then
                 DATA_BUS_SIGNAL<=PROCESSOR_STATUS_REGISTER_DATA_BUS_OUTPUT;
             elsif (CONTROL_SIGNAL_STACK_POINTER_OUTPUT_TO_DATA_BUS = '1') then
@@ -534,8 +528,8 @@ begin
             --Step counter signals
              CONTROL_SIGNAL_STEP_COUNTER_RESET                                                                              <='0';
              CONTROL_SIGNAL_STEP_COUNTER_ENABLE                                                                             <='0';
-             CONTROL_SIGNAL_STEP_COUNTER_INPUT_FROM_DATA_BUS                                                                <='0';
-             CONTROL_SIGNAL_STEP_COUNTER_OUTPUT_TO_DATA_BUS                                                                 <='0';
+             CONTROL_SIGNAL_STACK_POINTER_INCREMENT                                                                         <='0';
+             CONTROL_SIGNAL_STACK_POINTER_DECREMENT                                                                         <='0';
             
             --Interconections (OUT) from module
              INTERCONECT_STEP_COUNTER_OUT_TO_INSTRUCTION_DECODER_IN                                                         <= "0000";

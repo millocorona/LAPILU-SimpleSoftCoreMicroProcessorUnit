@@ -22,6 +22,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use work.LAPILU_Aritmetic_Components_PKG.ALL;
 
 entity StackPointerRegister is
     generic (
@@ -31,6 +32,9 @@ entity StackPointerRegister is
     port (  
         CLOCK                        : in std_logic;
         RESET                        : in std_logic; 
+        
+        INCREMENT_STACK_POINTER      : in std_logic;
+        DECREMENT_STACK_POINTER      : in std_logic;
         
         LOAD_FROM_DATA_BUS           : in std_logic;
         DATA_INPUT_FROM_DATA_BUS     : in  std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
@@ -45,13 +49,40 @@ end StackPointerRegister;
 
 
 architecture StackPointerRegisterArchitecture of StackPointerRegister is
-    signal DATA_BUFFER : std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+    signal DATA_BUFFER         : std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+    signal ADDER_RESULT_BUFFER : std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+    signal ADDER_B_OPERAND     : std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+    signal ADDER_CARRY_IN      : std_logic;
 begin
-
+    
+    NBitsFullAdder: 
+        entity work.NBitsFullAdder
+            generic map (
+                LENGTH   => DATA_BUS_LENGTH
+            )
+            port map (
+                A_OPERAND  => DATA_BUFFER,
+                B_OPERAND  => ADDER_B_OPERAND,
+                CARRY_IN   => ADDER_CARRY_IN,
+                SUM        => ADDER_RESULT_BUFFER,
+                CARRY_PENULTIMATE_BIT => open,
+                CARRY_OUT  => open
+            );
+    
     process(CLOCK, RESET) begin
         if RESET = '1' then
             DATA_BUFFER<=std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH)); 
         elsif rising_edge(CLOCK) then
+            if INCREMENT_STACK_POINTER = '1' then
+                ADDER_CARRY_IN<='1';
+                ADDER_B_OPERAND<= STD_LOGIC_VECTOR(TO_UNSIGNED(0,DATA_BUS_LENGTH));
+                DATA_BUFFER<=ADDER_RESULT_BUFFER;
+            elsif DECREMENT_STACK_POINTER = '1' then
+                ADDER_CARRY_IN<='1';
+                ADDER_B_OPERAND<=not (STD_LOGIC_VECTOR(TO_UNSIGNED(0,DATA_BUS_LENGTH-1))&'1');
+                DATA_BUFFER<=ADDER_RESULT_BUFFER;
+            end if;
+        
             if LOAD_FROM_DATA_BUS = '1' then
                 DATA_BUFFER <= DATA_INPUT_FROM_DATA_BUS; 
             end if;

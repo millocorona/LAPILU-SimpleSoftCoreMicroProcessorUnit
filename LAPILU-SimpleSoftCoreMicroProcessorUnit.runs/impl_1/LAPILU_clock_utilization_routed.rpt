@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Thu Apr  2 14:35:28 2020
+| Date         : Tue Apr  7 18:13:20 2020
 | Host         : Naboo running 64-bit Arch Linux
 | Command      : report_clock_utilization -file LAPILU_clock_utilization_routed.rpt
 | Design       : LAPILU

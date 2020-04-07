@@ -115,13 +115,6 @@ package LAPILU_Modules_PKG is
             CLOCK                        :in  std_logic;
             RESET                        :in  std_logic;
             COUNT_ENABLE                 :in  std_logic;
-            
-            INPUT_ENABLE_DATA_BUS        :in  std_logic;
-            DATA_BUS_INPUT               :in  std_logic_vector(3 downto 0);
-            
-            OUTPUT_ENABLE_DATA_BUS       :in  std_logic;
-            DATA_BUS_OUTPUT              :out std_logic_vector(3 downto 0);
-           
             INSTRUCTION_DECODER_OUTPUT   :out std_logic_vector(3 downto 0)
             
         );
@@ -129,22 +122,25 @@ package LAPILU_Modules_PKG is
         
         
     component StackPointerRegister is
-        generic (
-            DATA_BUS_LENGTH       : integer := 8;
-            ADDRESS_BUS_LENGTH    : integer := 16
-        );
-        port (  
-            CLOCK                        : in std_logic;
-            RESET                        : in std_logic; 
-            
-            LOAD_FROM_DATA_BUS           : in std_logic;
-            DATA_INPUT_FROM_DATA_BUS     : in  std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
-            
-            OUTPUT_ENABLE_TO_DATA_BUS    : in std_logic;
-            DATA_OUTPUT_TO_DATA_BUS      : out std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
-            
-            OUTPUT_ENABLE_TO_ADDRESS_BUS : in std_logic;
-            DATA_OUTPUT_TO_ADDRESS_BUS   : out std_logic_vector (ADDRESS_BUS_LENGTH-1 downto 0)
+            generic (
+                DATA_BUS_LENGTH       : integer := 8;
+                ADDRESS_BUS_LENGTH    : integer := 16
+            );
+            port (  
+                CLOCK                        : in std_logic;
+                RESET                        : in std_logic; 
+                
+                INCREMENT_STACK_POINTER      : in std_logic;
+                DECREMENT_STACK_POINTER      : in std_logic;
+                
+                LOAD_FROM_DATA_BUS           : in std_logic;
+                DATA_INPUT_FROM_DATA_BUS     : in  std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+                
+                OUTPUT_ENABLE_TO_DATA_BUS    : in std_logic;
+                DATA_OUTPUT_TO_DATA_BUS      : out std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+                
+                OUTPUT_ENABLE_TO_ADDRESS_BUS : in std_logic;
+                DATA_OUTPUT_TO_ADDRESS_BUS   : out std_logic_vector (ADDRESS_BUS_LENGTH-1 downto 0)
         );
     end component;
     
