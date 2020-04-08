@@ -212,8 +212,6 @@ And the truth table that describes the behavior in each clock cycle is the follo
 <img src="https://github.com/millocorona/LAPILU-SimpleSoftCoreMicroProcessorUnit/blob/master/LAPILU-SimpleSoftCoreMicroProcessorUnit.docs/Control%20logic/LAPILU-SimpleSoftCoreMicroProcessorUnit%20-%20Control%20logic.png">
 <br>
 <br>
-As you can see, it is not complete yet, we are currently working on that, we are going to keep this document updated as soon as we complete the table.
-<br>
 
 ## Instruction set and addressing modes
 
