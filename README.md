@@ -70,6 +70,14 @@ The VHDL top entity has the following structure
 
 In theory it should work on any FPGA, and maybe some CPLD's but for development we use a Xilinx Nexys A7 (Nexys 4 DDR), and also the IDE we use is Xilinx Vivado 2019.2
 
+If you want to implement LAPILU in another device from Xilinx and you are using Vivado, probably you only need to clone the repository, open the project and change the setting to match your specific device, also replace the implementation contraints file as you need.
+<br>
+If you want to implement LAPILU in another device from Xilinx and you are using ISE, only download the .src directory, create a new project and add the files to ISE, also replace the implementation contraints file as you need.
+<br>
+If you want to implement LAPILU in another device from another vendor you only need the .src directory, create a project for your device and import the source code to the project, also create an implementation contraints file for your device as you need.
+<br>
+The implementation and bitstream contained in this repository are generated for the Xilinx Nexys A7 (Nexys 4 DDR) 
+<br>
 ## Architecture overview
 
 The architecture is based on the design of the MOS 6502 CPU (yes that's the famous CPU used in the NES, 
