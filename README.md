@@ -49,22 +49,21 @@ The VHDL top entity has the following structure
 <br>
   <pre>
   <code>
-  entity LAPILU is
-      generic (
-          DATA_BUS_LENGTH    : integer := 8;
-          ADDRESS_BUS_LENGTH : integer := 16  
-      );
-      port (
-          CLOCK           : in     std_logic;
-          INVERTED_CLOCK  : out    std_logic;
-          DATA_BUS        : inout  std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
-          ADDRESS_BUS     : out    std_logic_vector (ADDRESS_BUS_LENGTH-1 downto 0);
-          RW              : out    std_logic;
-          IRQ             : in     std_logic;
-          NMI             : in     std_logic;
-          CPU_RESET       : in     std_logic
-      ); 
-  end LAPILU;
+    entity LAPILU is
+        generic (
+            DATA_BUS_LENGTH    : integer := 8; 
+            ADDRESS_BUS_LENGTH : integer := 16 
+        );
+        port (
+            CLOCK           : in     std_logic;
+            INVERTED_CLOCK  : out    std_logic;
+            DATA_BUS        : inout  std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+            ADDRESS_BUS     : out    std_logic_vector (ADDRESS_BUS_LENGTH-1 downto 0);
+            RW              : out    std_logic; --HIGH is READ,LOW is WRITE
+            IRQ             : in     std_logic;
+            CPU_RESET       : in     std_logic
+        ); 
+    end LAPILU;
   </code>
   </pre>
 ## Target devices
