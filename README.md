@@ -69,14 +69,19 @@ The VHDL top entity has the following structure
 ## Target devices
 
 In theory it should work on any FPGA, and maybe some CPLD's but for development we use a Xilinx Nexys A7 (Nexys 4 DDR), and also the IDE we use is Xilinx Vivado 2019.2
-
+<br>
+<br>
 If you want to implement LAPILU in another device from Xilinx and you are using Vivado, probably you only need to clone the repository, open the project and change the setting to match your specific device, also replace the implementation contraints file as you need.
+<br>
 <br>
 If you want to implement LAPILU in another device from Xilinx and you are using ISE, only download the .src directory, create a new project and add the files to ISE, also replace the implementation contraints file as you need.
 <br>
+<br>
 If you want to implement LAPILU in another device from another vendor you only need the .src directory, create a project for your device and import the source code to the project, also create an implementation contraints file for your device as you need.
 <br>
+<br>
 The implementation and bitstream contained in this repository are generated for the Xilinx Nexys A7 (Nexys 4 DDR) 
+<br>
 <br>
 ## Architecture overview
 
