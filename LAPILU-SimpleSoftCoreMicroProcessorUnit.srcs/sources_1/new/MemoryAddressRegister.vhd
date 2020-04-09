@@ -32,14 +32,12 @@ entity MemoryAddressRegister is
         RESET                        :in  std_logic;
         
         INPUT_ENABLE_DATA_BUS_LOW    :in  std_logic;
-        DATA_BUS_LOW_INPUT           :in  std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
         INPUT_ENABLE_DATA_BUS_HIGH   :in  std_logic;
-        DATA_BUS_HIGH_INPUT          :in  std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
+        DATA_BUS_INPUT          :in  std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
         
         OUTPUT_ENABLE_DATA_BUS_LOW   :in  std_logic;
-        DATA_BUS_LOW_OUTPUT          :out std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
         OUTPUT_ENABLE_DATA_BUS_HIGH  :in  std_logic;
-        DATA_BUS_HIGH_OUTPUT         :out std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
+        DATA_BUS_OUTPUT         :out std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
         
         OUTPUT_ENABLE_ADDRESS_BUS    :in  std_logic;
         ADDRESS_BUS_OUTPUT           :out std_logic_vector(ADDRESS_BUS_LENGTH-1 downto 0)
@@ -59,7 +57,7 @@ begin
             if INPUT_ENABLE_DATA_BUS_LOW = '1' then
                 for i in 0 to DATA_BUS_LENGTH-1 loop
                     if i<ADDRESS_BUS_LENGTH-1 then
-                        DATA_BUFFER(DATA_BUS_LENGTH+i)<=DATA_BUS_LOW_INPUT(i);
+                        DATA_BUFFER(i)<=DATA_BUS_INPUT(i);
                     end if;
                 end loop;
                 for i in 0 to DATA_BUS_LENGTH-1 loop
@@ -70,33 +68,30 @@ begin
             elsif INPUT_ENABLE_DATA_BUS_HIGH = '1' then
                 for i in 0 to DATA_BUS_LENGTH-1 loop
                     if i<ADDRESS_BUS_LENGTH-1 then
-                        DATA_BUFFER(DATA_BUS_LENGTH+i)<=DATA_BUS_HIGH_INPUT(i);
+                        DATA_BUFFER(DATA_BUS_LENGTH+i)<=DATA_BUS_INPUT(i);
                     end if;
                 end loop;
             end if;
             if OUTPUT_ENABLE_DATA_BUS_LOW = '1' then
                 for i in 0 to DATA_BUS_LENGTH-1 loop
                     if i<ADDRESS_BUS_LENGTH-1 then
-                        DATA_BUS_LOW_OUTPUT(i)<=DATA_BUFFER(i);
+                        DATA_BUS_OUTPUT(i)<=DATA_BUFFER(i);
                     else
-                        DATA_BUS_LOW_OUTPUT(i)<='0';
+                        DATA_BUS_OUTPUT(i)<='0';
                     end if;
                 end loop;
-            else
-                DATA_BUS_LOW_OUTPUT<=std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH));
-            end if;
-            
-            if OUTPUT_ENABLE_DATA_BUS_HIGH = '1' then
+            elsif OUTPUT_ENABLE_DATA_BUS_HIGH = '1' then
                 for i in 0 to DATA_BUS_LENGTH-1 loop
                     if i<ADDRESS_BUS_LENGTH-1 then
-                        DATA_BUS_HIGH_OUTPUT(i)<=DATA_BUFFER(DATA_BUS_LENGTH+i);
+                        DATA_BUS_OUTPUT(i)<=DATA_BUFFER(DATA_BUS_LENGTH+i);
                     else
-                        DATA_BUS_HIGH_OUTPUT(i)<='0';
+                        DATA_BUS_OUTPUT(i)<='0';
                     end if;
                 end loop;
             else
-                DATA_BUS_HIGH_OUTPUT<=std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH));
+                DATA_BUS_OUTPUT<=std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH));
             end if;
+            
             if OUTPUT_ENABLE_ADDRESS_BUS='1' then
                 ADDRESS_BUS_OUTPUT<=DATA_BUFFER;
             else

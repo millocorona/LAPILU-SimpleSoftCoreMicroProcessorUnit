@@ -24,6 +24,10 @@ entity TFlipFlop is
     port(
         CLOCK :in std_logic;
         RESET :in std_logic;
+        
+        LOAD  :in std_logic;
+        DATA  :in std_logic;
+        
         T     :in std_logic;
         Q     :out std_logic
     );
@@ -35,6 +39,8 @@ begin
     process (CLOCK,RESET) begin
         if RESET = '1' then 
             TEMP<='0';
+        elsif LOAD = '1' then
+            TEMP<=DATA;
         elsif rising_edge(CLOCK) then 
             if T='0' then
                 TEMP <= TEMP;

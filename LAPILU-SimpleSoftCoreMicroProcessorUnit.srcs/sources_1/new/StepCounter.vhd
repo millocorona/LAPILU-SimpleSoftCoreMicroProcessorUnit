@@ -48,7 +48,7 @@ begin
     FOR_TO_GENERATE_FLIP_FLOPS_T:
         for i in 0 to 3 
             generate
-                FLIP_FLOP_T_i: entity work.TFlipFlop port map(CLOCK=>CLOCK,RESET=>RESET,T=>Ts(i),Q=>COUNT(i));
+                FLIP_FLOP_T_i: entity work.TFlipFlop port map(CLOCK=>CLOCK,RESET=>RESET,LOAD=>'0',DATA=>'0',T=>Ts(i),Q=>COUNT(i));
                 Ts(i+1)<=Ts(i) and COUNT(i);
             end generate;
 

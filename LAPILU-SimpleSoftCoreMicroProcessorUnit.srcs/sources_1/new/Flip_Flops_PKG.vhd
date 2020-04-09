@@ -27,6 +27,10 @@ package Flip_Flops_PKG is
         port(
             CLOCK :in std_logic;
             RESET :in std_logic;
+            
+            LOAD  :in std_logic;
+            DATA  :in std_logic;
+            
             T     :in std_logic;
             Q     :out std_logic
         );

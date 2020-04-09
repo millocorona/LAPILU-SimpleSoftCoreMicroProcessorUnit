@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Apr  7 18:11:20 2020
-# Process ID: 25166
+# Start of session at: Wed Apr  8 20:18:56 2020
+# Process ID: 54149
 # Current directory: /home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.runs/impl_1
 # Command line: vivado -log LAPILU.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source LAPILU.tcl -notrace
 # Log file: /home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.runs/impl_1/LAPILU.vdi

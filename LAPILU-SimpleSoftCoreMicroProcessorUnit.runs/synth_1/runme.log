@@ -15,11 +15,11 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24985 
+INFO: Helper process launched with PID 53876 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1993.738 ; gain = 201.719 ; free physical = 172 ; free virtual = 2673
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1993.738 ; gain = 201.719 ; free physical = 1083 ; free virtual = 2723
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'LAPILU' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'LAPILU' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:44]
 	Parameter DATA_BUS_LENGTH bound to: 8 - type: integer 
 	Parameter ADDRESS_BUS_LENGTH bound to: 16 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'NBitsAcumulator' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:47]
@@ -63,13 +63,15 @@ WARNING: [Synth 8-614] signal 'RESULT_IS_ZERO_BUFFER' is read in the process but
 WARNING: [Synth 8-614] signal 'CARRY_OUT_BUFFER' is read in the process but is not in the sensitivity list [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/AritmeticLogicUnit.vhd:207]
 WARNING: [Synth 8-614] signal 'OVERFLOW_BUFFER' is read in the process but is not in the sensitivity list [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/AritmeticLogicUnit.vhd:207]
 INFO: [Synth 8-256] done synthesizing module 'AritmeticLogicUnit' (6#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/AritmeticLogicUnit.vhd:59]
-INFO: [Synth 8-638] synthesizing module 'ProgramCounter' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProgramCounter.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'ProgramCounter' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProgramCounter.vhd:49]
 	Parameter DATA_BUS_LENGTH bound to: 8 - type: integer 
 	Parameter ADDRESS_BUS_LENGTH bound to: 16 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'TFlipFlop' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:32]
-WARNING: [Synth 8-614] signal 'TEMP' is read in the process but is not in the sensitivity list [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:35]
-INFO: [Synth 8-256] done synthesizing module 'TFlipFlop' (7#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'ProgramCounter' (8#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProgramCounter.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'TFlipFlop' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:36]
+WARNING: [Synth 8-614] signal 'LOAD' is read in the process but is not in the sensitivity list [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:39]
+WARNING: [Synth 8-614] signal 'DATA' is read in the process but is not in the sensitivity list [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:39]
+WARNING: [Synth 8-614] signal 'TEMP' is read in the process but is not in the sensitivity list [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'TFlipFlop' (7#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'ProgramCounter' (8#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProgramCounter.vhd:49]
 INFO: [Synth 8-638] synthesizing module 'StepCounter' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StepCounter.vhd:42]
 	Parameter DATA_BUS_LENGTH bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'StepCounter' (9#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StepCounter.vhd:42]
@@ -80,35 +82,26 @@ INFO: [Synth 8-638] synthesizing module 'StackPointerRegister' [/home/millocoron
 	Parameter DATA_BUS_LENGTH bound to: 8 - type: integer 
 	Parameter ADDRESS_BUS_LENGTH bound to: 16 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'StackPointerRegister' (11#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StackPointerRegister.vhd:51]
-INFO: [Synth 8-638] synthesizing module 'MemoryAddressRegister' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'MemoryAddressRegister' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:48]
 	Parameter DATA_BUS_LENGTH bound to: 8 - type: integer 
 	Parameter ADDRESS_BUS_LENGTH bound to: 16 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'MemoryAddressRegister' (12#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'LAPILU' (13#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:46]
-WARNING: [Synth 8-3331] design MemoryAddressRegister has unconnected port DATA_BUS_LOW_INPUT[7]
-WARNING: [Synth 8-3331] design MemoryAddressRegister has unconnected port DATA_BUS_LOW_INPUT[6]
-WARNING: [Synth 8-3331] design MemoryAddressRegister has unconnected port DATA_BUS_LOW_INPUT[5]
-WARNING: [Synth 8-3331] design MemoryAddressRegister has unconnected port DATA_BUS_LOW_INPUT[4]
-WARNING: [Synth 8-3331] design MemoryAddressRegister has unconnected port DATA_BUS_LOW_INPUT[3]
-WARNING: [Synth 8-3331] design MemoryAddressRegister has unconnected port DATA_BUS_LOW_INPUT[2]
-WARNING: [Synth 8-3331] design MemoryAddressRegister has unconnected port DATA_BUS_LOW_INPUT[1]
-WARNING: [Synth 8-3331] design MemoryAddressRegister has unconnected port DATA_BUS_LOW_INPUT[0]
+INFO: [Synth 8-256] done synthesizing module 'MemoryAddressRegister' (12#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:48]
+INFO: [Synth 8-4471] merging register 'CONTROL_SIGNAL_STACK_POINTER_LOAD_FROM_DATA_BUS_reg' into 'CONTROL_SIGNAL_ALU_OUT_ENABLE_TO_DATA_BUS_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:359]
+INFO: [Synth 8-4471] merging register 'CONTROL_SIGNAL_STACK_POINTER_OUTPUT_TO_DATA_BUS_reg' into 'CONTROL_SIGNAL_ALU_OUT_ENABLE_TO_DATA_BUS_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:362]
+WARNING: [Synth 8-6014] Unused sequential element CONTROL_SIGNAL_STACK_POINTER_LOAD_FROM_DATA_BUS_reg was removed.  [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:359]
+WARNING: [Synth 8-6014] Unused sequential element CONTROL_SIGNAL_STACK_POINTER_OUTPUT_TO_DATA_BUS_reg was removed.  [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:362]
+INFO: [Synth 8-4471] merging register 'CONTROL_SIGNAL_ACUMULATOR_LOAD_FROM_ALU_reg' into 'CONTROL_SIGNAL_ALU_OUT_ENABLE_TO_ACUMULATOR_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:187]
+INFO: [Synth 8-4471] merging register 'CONTROL_SIGNAL_PROCESSOR_STATUS_REGISTER_LOAD_FROM_ALU_reg' into 'CONTROL_SIGNAL_ACUMULATOR_OUTPUT_ENABLE_TO_ALU_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:315]
+WARNING: [Synth 8-6014] Unused sequential element CONTROL_SIGNAL_ACUMULATOR_LOAD_FROM_ALU_reg was removed.  [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:187]
+WARNING: [Synth 8-6014] Unused sequential element CONTROL_SIGNAL_PROCESSOR_STATUS_REGISTER_LOAD_FROM_ALU_reg was removed.  [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:315]
+INFO: [Synth 8-256] done synthesizing module 'LAPILU' (13#1) [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:44]
 WARNING: [Synth 8-3331] design ProcessorStatusRegister has unconnected port DATA_BUS_INPUT[7]
 WARNING: [Synth 8-3331] design ProcessorStatusRegister has unconnected port DATA_BUS_INPUT[6]
 WARNING: [Synth 8-3331] design ProcessorStatusRegister has unconnected port DATA_BUS_INPUT[5]
-WARNING: [Synth 8-3331] design ProgramCounter has unconnected port DATA_BUS_LOW_INPUT[7]
-WARNING: [Synth 8-3331] design ProgramCounter has unconnected port DATA_BUS_LOW_INPUT[6]
-WARNING: [Synth 8-3331] design ProgramCounter has unconnected port DATA_BUS_LOW_INPUT[5]
-WARNING: [Synth 8-3331] design ProgramCounter has unconnected port DATA_BUS_LOW_INPUT[4]
-WARNING: [Synth 8-3331] design ProgramCounter has unconnected port DATA_BUS_LOW_INPUT[3]
-WARNING: [Synth 8-3331] design ProgramCounter has unconnected port DATA_BUS_LOW_INPUT[2]
-WARNING: [Synth 8-3331] design ProgramCounter has unconnected port DATA_BUS_LOW_INPUT[1]
-WARNING: [Synth 8-3331] design ProgramCounter has unconnected port DATA_BUS_LOW_INPUT[0]
 WARNING: [Synth 8-3331] design AritmeticLogicUnit has unconnected port RESET
 WARNING: [Synth 8-3331] design LAPILU has unconnected port IRQ
-WARNING: [Synth 8-3331] design LAPILU has unconnected port NMI
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2056.488 ; gain = 264.469 ; free physical = 224 ; free virtual = 2703
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2130.488 ; gain = 338.469 ; free physical = 1030 ; free virtual = 2672
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -121,69 +114,48 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2056.488 ; gain = 264.469 ; free physical = 218 ; free virtual = 2698
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2145.332 ; gain = 353.312 ; free physical = 1050 ; free virtual = 2691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2056.488 ; gain = 264.469 ; free physical = 218 ; free virtual = 2698
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2145.332 ; gain = 353.312 ; free physical = 1050 ; free virtual = 2691
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2056.488 ; gain = 0.000 ; free physical = 211 ; free virtual = 2691
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2145.332 ; gain = 0.000 ; free physical = 1039 ; free virtual = 2680
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/constrs_1/imports/VHDL/Puertos-Nexys-A7-100T.xdc]
 Finished Parsing XDC File [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/constrs_1/imports/VHDL/Puertos-Nexys-A7-100T.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/constrs_1/imports/VHDL/Puertos-Nexys-A7-100T.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/LAPILU_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/LAPILU_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.254 ; gain = 0.000 ; free physical = 119 ; free virtual = 2614
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2263.129 ; gain = 0.000 ; free physical = 947 ; free virtual = 2590
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2191.254 ; gain = 0.000 ; free physical = 119 ; free virtual = 2614
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2263.129 ; gain = 0.000 ; free physical = 947 ; free virtual = 2590
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 184 ; free virtual = 2679
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 1036 ; free virtual = 2678
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 183 ; free virtual = 2678
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 1036 ; free virtual = 2678
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 183 ; free virtual = 2678
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 1036 ; free virtual = 2678
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'LOGIC_RESULT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/AritmeticLogicUnit.vhd:142]
 WARNING: [Synth 8-327] inferring latch for variable 'ADDER_B_OPERAND_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/AritmeticLogicUnit.vhd:104]
 WARNING: [Synth 8-327] inferring latch for variable 'ADDER_CARRY_IN_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/AritmeticLogicUnit.vhd:105]
-WARNING: [Synth 8-327] inferring latch for variable 'CONTROL_SIGNAL_READ_OR_WRITE_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:185]
-WARNING: [Synth 8-327] inferring latch for variable 'MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:395]
-WARNING: [Synth 8-327] inferring latch for variable 'PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:281]
-WARNING: [Synth 8-327] inferring latch for variable 'STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:371]
-WARNING: [Synth 8-327] inferring latch for variable 'MEMORY_ADDRESS_REGISTER_DATA_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:390]
-WARNING: [Synth 8-327] inferring latch for variable 'STACK_POINTER_REGISTER_DATA_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:368]
-WARNING: [Synth 8-327] inferring latch for variable 'PROCESSOR_STATUS_REGISTER_DATA_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:347]
-WARNING: [Synth 8-327] inferring latch for variable 'PROGRAM_COUNTER_DATA_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:276]
-WARNING: [Synth 8-327] inferring latch for variable 'REGISTER_Y_DATA_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:256]
-WARNING: [Synth 8-327] inferring latch for variable 'REGISTER_X_DATA_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:242]
-WARNING: [Synth 8-327] inferring latch for variable 'ALU_DATA_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:223]
-WARNING: [Synth 8-327] inferring latch for variable 'ACUMULATOR_DATA_BUS_OUTPUT_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:188]
-WARNING: [Synth 8-327] inferring latch for variable 'INTERCONECT_SIGNAL_ALU_CARRY_FLAG_OUT_TO_PROCESSOR_STATUS_REGISTER_CARRY_FLAG_IN_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:225]
-WARNING: [Synth 8-327] inferring latch for variable 'INTERCONECT_SIGNAL_ALU_OVERFLOW_FLAG_OUT_TO_PROCESSOR_STATUS_REGISTER_OVERFLOW_FLAG_IN_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:226]
-WARNING: [Synth 8-327] inferring latch for variable 'INTERCONECT_SIGNAL_ALU_ZERO_FLAG_OUT_TO_PROCESSOR_STATUS_REGISTER_ZERO_FLAG_IN_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:228]
-WARNING: [Synth 8-327] inferring latch for variable 'INTERCONECT_SIGNAL_ALU_NEGATIVE_FLAG_OUT_TO_PROCESSOR_STATUS_REGISTER_NEGATIVE_FLAG_IN_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:227]
-WARNING: [Synth 8-327] inferring latch for variable 'CONTROL_SIGNAL_ALU_OPERATION_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:219]
-WARNING: [Synth 8-327] inferring latch for variable 'INTERCONECT_ACUMULATOR_OUT_TO_ALU_IN_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:193]
-WARNING: [Synth 8-327] inferring latch for variable 'INTERCONECT_REGISTER_B_OUT_TO_ALU_IN_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:207]
-WARNING: [Synth 8-327] inferring latch for variable 'INTERCONECT_SIGNAL_PROCESSOR_STATUS_REGISTER_CARRY_FLAG_OUT_TO_INSTRUCTION_DECODER_AND_ALU_CARRY_FLAG_IN_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:222]
-WARNING: [Synth 8-327] inferring latch for variable 'INTERCONECT_ALU_OUT_TO_ACUMULATOR_IN_reg' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:192]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 175 ; free virtual = 2671
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 1040 ; free virtual = 2684
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -199,19 +171,53 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit         XORs := 1     
 	   3 Input      1 Bit         XORs := 16    
 +---Registers : 
-	               16 Bit    Registers := 5     
-	                8 Bit    Registers := 20    
-	                1 Bit    Registers := 26    
+	               16 Bit    Registers := 6     
+	                8 Bit    Registers := 18    
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 67    
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 8     
 	   3 Input     16 Bit        Muxes := 2     
-	   4 Input     16 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 17    
+	   2 Input      8 Bit        Muxes := 7     
 	  11 Input      8 Bit        Muxes := 2     
-	   3 Input      8 Bit        Muxes := 3     
-	   5 Input      8 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 28    
+	   3 Input      8 Bit        Muxes := 2     
+	  58 Input      4 Bit        Muxes := 1     
+	  60 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 716   
 	  11 Input      1 Bit        Muxes := 4     
+	 118 Input      1 Bit        Muxes := 1     
+	  23 Input      1 Bit        Muxes := 1     
+	  96 Input      1 Bit        Muxes := 1     
+	 142 Input      1 Bit        Muxes := 1     
+	 137 Input      1 Bit        Muxes := 1     
+	 147 Input      1 Bit        Muxes := 1     
+	 148 Input      1 Bit        Muxes := 1     
+	 120 Input      1 Bit        Muxes := 1     
+	 107 Input      1 Bit        Muxes := 1     
+	 101 Input      1 Bit        Muxes := 1     
+	  95 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 13    
+	  10 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	  65 Input      1 Bit        Muxes := 1     
+	  68 Input      1 Bit        Muxes := 1     
+	  66 Input      1 Bit        Muxes := 1     
+	  67 Input      1 Bit        Muxes := 1     
+	  69 Input      1 Bit        Muxes := 1     
+	  60 Input      1 Bit        Muxes := 1     
+	  63 Input      1 Bit        Muxes := 1     
+	  61 Input      1 Bit        Muxes := 1     
+	  62 Input      1 Bit        Muxes := 1     
+	  64 Input      1 Bit        Muxes := 1     
+	 128 Input      1 Bit        Muxes := 1     
+	 119 Input      1 Bit        Muxes := 1     
+	 127 Input      1 Bit        Muxes := 1     
+	  70 Input      1 Bit        Muxes := 1     
+	 112 Input      1 Bit        Muxes := 1     
+	 113 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -224,24 +230,57 @@ Detailed RTL Component Info :
 +---Registers : 
 	               16 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 41    
 +---Muxes : 
-	   4 Input     16 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 3     
-	   3 Input      8 Bit        Muxes := 1     
-	   5 Input      8 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	  58 Input      4 Bit        Muxes := 1     
+	  60 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 628   
+	 118 Input      1 Bit        Muxes := 1     
+	  23 Input      1 Bit        Muxes := 1     
+	  96 Input      1 Bit        Muxes := 1     
+	 142 Input      1 Bit        Muxes := 1     
+	 137 Input      1 Bit        Muxes := 1     
+	 147 Input      1 Bit        Muxes := 1     
+	 148 Input      1 Bit        Muxes := 1     
+	 120 Input      1 Bit        Muxes := 1     
+	 107 Input      1 Bit        Muxes := 1     
+	 101 Input      1 Bit        Muxes := 1     
+	  95 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 13    
+	  10 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	  65 Input      1 Bit        Muxes := 1     
+	  68 Input      1 Bit        Muxes := 1     
+	  66 Input      1 Bit        Muxes := 1     
+	  67 Input      1 Bit        Muxes := 1     
+	  69 Input      1 Bit        Muxes := 1     
+	  60 Input      1 Bit        Muxes := 1     
+	  63 Input      1 Bit        Muxes := 1     
+	  61 Input      1 Bit        Muxes := 1     
+	  62 Input      1 Bit        Muxes := 1     
+	  64 Input      1 Bit        Muxes := 1     
+	 128 Input      1 Bit        Muxes := 1     
+	 119 Input      1 Bit        Muxes := 1     
+	 127 Input      1 Bit        Muxes := 1     
+	  70 Input      1 Bit        Muxes := 1     
+	 112 Input      1 Bit        Muxes := 1     
+	 113 Input      1 Bit        Muxes := 1     
 Module NBitsAcumulator 
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module NBitsRegister 
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
 Module OneBitFullAdder 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -257,13 +296,15 @@ Module TFlipFlop
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
 Module ProgramCounter 
 Detailed RTL Component Info : 
 +---Registers : 
-	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
 	   2 Input      8 Bit        Muxes := 2     
 Module ProcessorStatusRegister 
 Detailed RTL Component Info : 
@@ -288,9 +329,10 @@ Module MemoryAddressRegister
 Detailed RTL Component Info : 
 +---Registers : 
 	               16 Bit    Registers := 2     
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -307,11 +349,13 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'REGISTER_X/DATA_BUFFER_reg[7:0]' into 'REGISTER_B/DATA_BUFFER_reg[7:0]' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsRegister.vhd:47]
-INFO: [Synth 8-4471] merging register 'REGISTER_Y/DATA_BUFFER_reg[7:0]' into 'REGISTER_B/DATA_BUFFER_reg[7:0]' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsRegister.vhd:47]
-INFO: [Synth 8-4471] merging register 'INSTRUCTION_REGISTER/DATA_BUFFER_reg[7:0]' into 'REGISTER_B/DATA_BUFFER_reg[7:0]' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsRegister.vhd:47]
+WARNING: [Synth 8-3331] design ProcessorStatusRegister has unconnected port DATA_BUS_INPUT[7]
+WARNING: [Synth 8-3331] design ProcessorStatusRegister has unconnected port DATA_BUS_INPUT[6]
+WARNING: [Synth 8-3331] design ProcessorStatusRegister has unconnected port DATA_BUS_INPUT[5]
+WARNING: [Synth 8-3331] design AritmeticLogicUnit has unconnected port RESET
+WARNING: [Synth 8-3331] design AritmeticLogicUnit has unconnected port OUT_ENABLE_TO_DATA_BUS
+WARNING: [Synth 8-3331] design AritmeticLogicUnit has unconnected port OUT_ENABLE_TO_ACUMULATOR
 WARNING: [Synth 8-3331] design LAPILU has unconnected port IRQ
-WARNING: [Synth 8-3331] design LAPILU has unconnected port NMI
 INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/ADDER_B_OPERAND_reg[7]' (FDRE) to 'STACK_POINTER_REGISTER/ADDER_B_OPERAND_reg[1]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\STACK_POINTER_REGISTER/ADDER_CARRY_IN_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\STACK_POINTER_REGISTER/ADDER_B_OPERAND_reg[0] )
@@ -320,67 +364,17 @@ INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/ADDER_B_OPERAND_re
 INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/ADDER_B_OPERAND_reg[3]' (FDRE) to 'STACK_POINTER_REGISTER/ADDER_B_OPERAND_reg[4]'
 INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/ADDER_B_OPERAND_reg[4]' (FDRE) to 'STACK_POINTER_REGISTER/ADDER_B_OPERAND_reg[5]'
 INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/ADDER_B_OPERAND_reg[5]' (FDRE) to 'STACK_POINTER_REGISTER/ADDER_B_OPERAND_reg[6]'
-INFO: [Synth 8-3886] merging instance 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[0]' (FDCE) to 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[1]'
-INFO: [Synth 8-3886] merging instance 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[1]' (FDCE) to 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[2]'
-INFO: [Synth 8-3886] merging instance 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[2]' (FDCE) to 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[3]'
-INFO: [Synth 8-3886] merging instance 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[3]' (FDCE) to 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[4]'
-INFO: [Synth 8-3886] merging instance 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[4]' (FDCE) to 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[5]'
-INFO: [Synth 8-3886] merging instance 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[5]' (FDCE) to 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[6]'
-INFO: [Synth 8-3886] merging instance 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[6]' (FDCE) to 'MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MEMORY_ADDRESS_REGISTER/DATA_BUFFER_reg[7] )
-INFO: [Synth 8-3886] merging instance 'CONTROL_SIGNAL_ALU_OPERATION_reg[0]' (LD) to 'CONTROL_SIGNAL_READ_OR_WRITE_reg'
-INFO: [Synth 8-3886] merging instance 'CONTROL_SIGNAL_ALU_OPERATION_reg[1]' (LD) to 'CONTROL_SIGNAL_READ_OR_WRITE_reg'
-INFO: [Synth 8-3886] merging instance 'CONTROL_SIGNAL_ALU_OPERATION_reg[2]' (LD) to 'CONTROL_SIGNAL_READ_OR_WRITE_reg'
-INFO: [Synth 8-3886] merging instance 'CONTROL_SIGNAL_ALU_OPERATION_reg[3]' (LD) to 'CONTROL_SIGNAL_READ_OR_WRITE_reg'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CONTROL_SIGNAL_READ_OR_WRITE_reg)
-INFO: [Synth 8-3886] merging instance 'DATA_BUS_SIGNAL_reg[0]' (FD) to 'DATA_BUS_SIGNAL_reg[7]'
-INFO: [Synth 8-3886] merging instance 'DATA_BUS_SIGNAL_reg[1]' (FD) to 'DATA_BUS_SIGNAL_reg[7]'
-INFO: [Synth 8-3886] merging instance 'DATA_BUS_SIGNAL_reg[2]' (FD) to 'DATA_BUS_SIGNAL_reg[7]'
-INFO: [Synth 8-3886] merging instance 'DATA_BUS_SIGNAL_reg[3]' (FD) to 'DATA_BUS_SIGNAL_reg[7]'
-INFO: [Synth 8-3886] merging instance 'DATA_BUS_SIGNAL_reg[4]' (FD) to 'DATA_BUS_SIGNAL_reg[7]'
-INFO: [Synth 8-3886] merging instance 'DATA_BUS_SIGNAL_reg[5]' (FD) to 'DATA_BUS_SIGNAL_reg[7]'
-INFO: [Synth 8-3886] merging instance 'DATA_BUS_SIGNAL_reg[6]' (FD) to 'DATA_BUS_SIGNAL_reg[7]'
-INFO: [Synth 8-3886] merging instance 'DATA_BUS_SIGNAL_reg[7]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[0]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[0]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[1]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[1]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[2]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[2]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[3]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[3]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[4]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[4]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[5]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[5]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[6]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[6]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[7]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[7]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[8]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[8]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[9]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[9]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[10]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[10]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[11]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[11]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[12]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[12]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[13]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[13]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[14]'
-INFO: [Synth 8-3886] merging instance 'ADDRESS_BUS_SIGNAL_reg[14]' (FD) to 'ADDRESS_BUS_SIGNAL_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ADDRESS_BUS_SIGNAL_reg[15] )
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ACUMULATOR/DATA_BUS_OUT_reg[7]/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ACUMULATOR/DATA_BUS_OUT_reg[6]/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ACUMULATOR/DATA_BUS_OUT_reg[5]/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ACUMULATOR/DATA_BUS_OUT_reg[4]/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ACUMULATOR/DATA_BUS_OUT_reg[3]/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ACUMULATOR/DATA_BUS_OUT_reg[2]/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ACUMULATOR/DATA_BUS_OUT_reg[1]/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ACUMULATOR/DATA_BUS_OUT_reg[0]/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd:55]
+INFO: [Synth 8-3886] merging instance 'PROCESSOR_STATUS_REGISTER/DATA_BUS_OUTPUT_reg[5]' (FDRE) to 'PROCESSOR_STATUS_REGISTER/DATA_BUS_OUTPUT_reg[6]'
+INFO: [Synth 8-3886] merging instance 'PROCESSOR_STATUS_REGISTER/DATA_BUS_OUTPUT_reg[6]' (FDRE) to 'PROCESSOR_STATUS_REGISTER/DATA_BUS_OUTPUT_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PROCESSOR_STATUS_REGISTER/DATA_BUS_OUTPUT_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CONTROL_SIGNAL_ALU_OUT_ENABLE_TO_DATA_BUS_reg)
+INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[8]' (FDSE) to 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[9]'
+INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[9]' (FDSE) to 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[10]'
+INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[10]' (FDSE) to 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[11]'
+INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[11]' (FDSE) to 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[12]'
+INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[12]' (FDSE) to 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[13]'
+INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[13]' (FDSE) to 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[14]'
+INFO: [Synth 8-3886] merging instance 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[14]' (FDSE) to 'STACK_POINTER_REGISTER/DATA_OUTPUT_TO_ADDRESS_BUS_reg[15]'
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[0] with 1st driver pin 'ARITMETIC_LOGIC_UNIT/NBitsFullAdder/FOR_TO_GENERATE_ADDERS[0].ADDER_i/SUM_inferred/SUM' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsFullAdder.vhd:38]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[0] with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsFullAdder.vhd:38]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net data0[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsFullAdder.vhd:38]
@@ -509,156 +503,8 @@ WARNING: [Synth 8-3332] Sequential element (ARITMETIC_LOGIC_UNIT/ADDER_CARRY_IN_
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ARITMETIC_LOGIC_UNIT/ADDER_CARRY_IN_reg/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/AritmeticLogicUnit.vhd:105]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/AritmeticLogicUnit.vhd:105]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/AritmeticLogicUnit.vhd:105]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'PROGRAM_COUNTER/FOR_TO_GENERATE_FLIP_FLOPS_T[8].FLIP_FLOP_T_i/TEMP_reg/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'PROGRAM_COUNTER/FOR_TO_GENERATE_FLIP_FLOPS_T[9].FLIP_FLOP_T_i/TEMP_reg/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'PROGRAM_COUNTER/FOR_TO_GENERATE_FLIP_FLOPS_T[10].FLIP_FLOP_T_i/TEMP_reg/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'PROGRAM_COUNTER/FOR_TO_GENERATE_FLIP_FLOPS_T[11].FLIP_FLOP_T_i/TEMP_reg/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'PROGRAM_COUNTER/FOR_TO_GENERATE_FLIP_FLOPS_T[12].FLIP_FLOP_T_i/TEMP_reg/Q' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd:37]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProcessorStatusRegister.vhd:75]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProcessorStatusRegister.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProcessorStatusRegister.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProcessorStatusRegister.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProcessorStatusRegister.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProcessorStatusRegister.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProcessorStatusRegister.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProcessorStatusRegister.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProcessorStatusRegister.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StackPointerRegister.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StackPointerRegister.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StackPointerRegister.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StackPointerRegister.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StackPointerRegister.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StackPointerRegister.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StackPointerRegister.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StackPointerRegister.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:80]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:80]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:80]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:80]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:80]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:80]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:80]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd:80]
-WARNING: [Synth 8-3332] Sequential element (CONTROL_SIGNAL_READ_OR_WRITE_reg) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[15]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[14]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[13]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[12]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[11]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[10]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[9]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[8]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[7]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[6]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[5]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[4]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[3]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[2]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[1]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_ADDRESS_BUS_OUTPUT_reg[0]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[15]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[14]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[13]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[12]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[11]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[10]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[9]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[8]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[7]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[6]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[5]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[4]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[3]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[2]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[1]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT_reg[0]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[15]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[14]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[13]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[12]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[11]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[10]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[9]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[8]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[7]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[6]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[5]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[4]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[3]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[2]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[1]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_ADDRESS_BUS_OUTPUT_reg[0]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_DATA_BUS_OUTPUT_reg[7]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_DATA_BUS_OUTPUT_reg[6]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_DATA_BUS_OUTPUT_reg[5]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_DATA_BUS_OUTPUT_reg[4]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_DATA_BUS_OUTPUT_reg[3]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_DATA_BUS_OUTPUT_reg[2]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_DATA_BUS_OUTPUT_reg[1]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (MEMORY_ADDRESS_REGISTER_DATA_BUS_OUTPUT_reg[0]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_DATA_BUS_OUTPUT_reg[7]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_DATA_BUS_OUTPUT_reg[6]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_DATA_BUS_OUTPUT_reg[5]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_DATA_BUS_OUTPUT_reg[4]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_DATA_BUS_OUTPUT_reg[3]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_DATA_BUS_OUTPUT_reg[2]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_DATA_BUS_OUTPUT_reg[1]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (STACK_POINTER_REGISTER_DATA_BUS_OUTPUT_reg[0]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROCESSOR_STATUS_REGISTER_DATA_BUS_OUTPUT_reg[7]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROCESSOR_STATUS_REGISTER_DATA_BUS_OUTPUT_reg[6]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROCESSOR_STATUS_REGISTER_DATA_BUS_OUTPUT_reg[5]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROCESSOR_STATUS_REGISTER_DATA_BUS_OUTPUT_reg[4]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROCESSOR_STATUS_REGISTER_DATA_BUS_OUTPUT_reg[3]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROCESSOR_STATUS_REGISTER_DATA_BUS_OUTPUT_reg[2]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROCESSOR_STATUS_REGISTER_DATA_BUS_OUTPUT_reg[1]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROCESSOR_STATUS_REGISTER_DATA_BUS_OUTPUT_reg[0]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_DATA_BUS_OUTPUT_reg[7]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_DATA_BUS_OUTPUT_reg[6]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_DATA_BUS_OUTPUT_reg[5]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_DATA_BUS_OUTPUT_reg[4]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_DATA_BUS_OUTPUT_reg[3]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_DATA_BUS_OUTPUT_reg[2]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_DATA_BUS_OUTPUT_reg[1]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (PROGRAM_COUNTER_DATA_BUS_OUTPUT_reg[0]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (REGISTER_Y_DATA_BUS_OUTPUT_reg[7]) is unused and will be removed from module LAPILU.
-WARNING: [Synth 8-3332] Sequential element (REGISTER_Y_DATA_BUS_OUTPUT_reg[6]) is unused and will be removed from module LAPILU.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:223]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:223]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:223]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:223]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:223]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:223]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:223]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:223]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:225]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:226]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:228]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:227]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:192]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:192]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:192]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:192]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:192]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:192]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:192]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd:192]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 161 ; free virtual = 2661
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 1007 ; free virtual = 2659
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -670,13 +516,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 175 ; free virtual = 2545
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:13 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 872 ; free virtual = 2525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 175 ; free virtual = 2545
+Finished Timing Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:13 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 872 ; free virtual = 2525
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -688,7 +534,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 174 ; free virtual = 2543
+Finished Technology Mapping : Time (s): cpu = 00:01:04 ; elapsed = 00:01:13 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 871 ; free virtual = 2524
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -712,13 +558,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 174 ; free virtual = 2544
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:19 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 871 ; free virtual = 2524
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 174 ; free virtual = 2544
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:19 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 871 ; free virtual = 2524
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -737,25 +583,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 174 ; free virtual = 2544
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:19 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 871 ; free virtual = 2524
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 174 ; free virtual = 2544
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:19 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 871 ; free virtual = 2524
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 174 ; free virtual = 2544
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:19 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 871 ; free virtual = 2524
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 174 ; free virtual = 2544
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:19 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 871 ; free virtual = 2524
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -768,41 +614,85 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |LUT1 |     1|
-|2     |IBUF |     1|
-|3     |OBUF |    18|
-+------+-----+------+
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     5|
+|3     |LUT2  |    60|
+|4     |LUT3  |    54|
+|5     |LUT4  |    83|
+|6     |LUT5  |    63|
+|7     |LUT6  |   292|
+|8     |FDCE  |    79|
+|9     |FDPE  |    18|
+|10    |FDRE  |   174|
+|11    |LDC   |    16|
+|12    |IBUF  |     2|
+|13    |IOBUF |     8|
+|14    |OBUF  |    18|
++------+------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    20|
-+------+---------+-------+------+
++------+-----------------------------------------------------+------------------------+------+
+|      |Instance                                             |Module                  |Cells |
++------+-----------------------------------------------------+------------------------+------+
+|1     |top                                                  |                        |   873|
+|2     |  ACUMULATOR                                         |NBitsAcumulator         |    26|
+|3     |  INSTRUCTION_REGISTER                               |NBitsRegister           |   350|
+|4     |  MEMORY_ADDRESS_REGISTER                            |MemoryAddressRegister   |    78|
+|5     |  PROCESSOR_STATUS_REGISTER                          |ProcessorStatusRegister |    26|
+|6     |  PROGRAM_COUNTER                                    |ProgramCounter          |   172|
+|7     |    \FOR_TO_GENERATE_FLIP_FLOPS_T[0].FLIP_FLOP_T_i   |TFlipFlop_5             |    11|
+|8     |    \FOR_TO_GENERATE_FLIP_FLOPS_T[10].FLIP_FLOP_T_i  |TFlipFlop_6             |     8|
+|9     |    \FOR_TO_GENERATE_FLIP_FLOPS_T[11].FLIP_FLOP_T_i  |TFlipFlop_7             |    11|
+|10    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[12].FLIP_FLOP_T_i  |TFlipFlop_8             |     6|
+|11    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[13].FLIP_FLOP_T_i  |TFlipFlop_9             |     8|
+|12    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[14].FLIP_FLOP_T_i  |TFlipFlop_10            |     7|
+|13    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[15].FLIP_FLOP_T_i  |TFlipFlop_11            |     7|
+|14    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[1].FLIP_FLOP_T_i   |TFlipFlop_12            |     6|
+|15    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[2].FLIP_FLOP_T_i   |TFlipFlop_13            |     7|
+|16    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[3].FLIP_FLOP_T_i   |TFlipFlop_14            |     8|
+|17    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[4].FLIP_FLOP_T_i   |TFlipFlop_15            |     9|
+|18    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[5].FLIP_FLOP_T_i   |TFlipFlop_16            |     7|
+|19    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[6].FLIP_FLOP_T_i   |TFlipFlop_17            |    10|
+|20    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[7].FLIP_FLOP_T_i   |TFlipFlop_18            |     7|
+|21    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[8].FLIP_FLOP_T_i   |TFlipFlop_19            |     9|
+|22    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[9].FLIP_FLOP_T_i   |TFlipFlop_20            |    10|
+|23    |  REGISTER_X                                         |NBitsRegister_0         |    17|
+|24    |  REGISTER_Y                                         |NBitsRegister_1         |    28|
+|25    |  STACK_POINTER_REGISTER                             |StackPointerRegister    |    39|
+|26    |  STEP_COUNTER                                       |StepCounter             |    30|
+|27    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[0].FLIP_FLOP_T_i   |TFlipFlop               |     7|
+|28    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[1].FLIP_FLOP_T_i   |TFlipFlop_2             |    11|
+|29    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[2].FLIP_FLOP_T_i   |TFlipFlop_3             |     8|
+|30    |    \FOR_TO_GENERATE_FLIP_FLOPS_T[3].FLIP_FLOP_T_i   |TFlipFlop_4             |     4|
++------+-----------------------------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2191.254 ; gain = 399.234 ; free physical = 174 ; free virtual = 2544
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:19 . Memory (MB): peak = 2263.129 ; gain = 471.109 ; free physical = 871 ; free virtual = 2524
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 294 critical warnings and 185 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 2191.254 ; gain = 264.469 ; free physical = 228 ; free virtual = 2597
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2191.262 ; gain = 399.234 ; free physical = 228 ; free virtual = 2597
+Synthesis finished with 0 errors, 111 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:05 ; elapsed = 00:01:15 . Memory (MB): peak = 2263.129 ; gain = 353.312 ; free physical = 921 ; free virtual = 2573
+Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:01:19 . Memory (MB): peak = 2263.137 ; gain = 471.109 ; free physical = 921 ; free virtual = 2573
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.262 ; gain = 0.000 ; free physical = 296 ; free virtual = 2666
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2263.137 ; gain = 0.000 ; free physical = 987 ; free virtual = 2640
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.262 ; gain = 0.000 ; free physical = 241 ; free virtual = 2612
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2263.137 ; gain = 0.000 ; free physical = 950 ; free virtual = 2603
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 24 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+  LDC => LDCE: 16 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-93 Infos, 166 Warnings, 198 Critical Warnings and 0 Errors encountered.
+69 Infos, 55 Warnings, 111 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:03 . Memory (MB): peak = 2191.262 ; gain = 664.125 ; free physical = 376 ; free virtual = 2746
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.262 ; gain = 0.000 ; free physical = 376 ; free virtual = 2746
+synth_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:39 . Memory (MB): peak = 2263.137 ; gain = 736.000 ; free physical = 1082 ; free virtual = 2734
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2263.137 ; gain = 0.000 ; free physical = 1082 ; free virtual = 2735
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/millocorona/Desarrollo/VHDL/LAPILU-SimpleSoftCoreMicroProcessorUnit/LAPILU-SimpleSoftCoreMicroProcessorUnit.runs/synth_1/LAPILU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file LAPILU_utilization_synth.rpt -pb LAPILU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr  7 18:11:08 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  8 20:18:44 2020...

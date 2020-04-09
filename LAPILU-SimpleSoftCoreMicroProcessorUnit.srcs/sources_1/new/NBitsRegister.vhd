@@ -45,7 +45,6 @@ begin
     process(CLOCK, RESET) begin
         if RESET = '1' then
             DATA_BUFFER<=std_logic_vector(to_unsigned(0,LENGTH)); 
-            DATA_OUTPUT<=std_logic_vector(to_unsigned(0,LENGTH));
         elsif rising_edge(CLOCK) then
             if LOAD = '1' then
                 DATA_BUFFER <= DATA_INPUT; 

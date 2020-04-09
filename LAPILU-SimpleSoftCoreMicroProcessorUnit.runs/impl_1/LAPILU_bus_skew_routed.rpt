@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Apr  7 18:13:20 2020
+| Date         : Wed Apr  8 20:20:53 2020
 | Host         : Naboo running 64-bit Arch Linux
 | Command      : report_bus_skew -warn_on_violation -file LAPILU_bus_skew_routed.rpt -pb LAPILU_bus_skew_routed.pb -rpx LAPILU_bus_skew_routed.rpx
 | Design       : LAPILU

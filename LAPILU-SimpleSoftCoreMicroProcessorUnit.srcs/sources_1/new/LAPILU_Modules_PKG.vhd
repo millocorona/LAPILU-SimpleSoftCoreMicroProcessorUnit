@@ -90,14 +90,12 @@ package LAPILU_Modules_PKG is
             COUNT_ENABLE                 :in  std_logic;
             
             INPUT_ENABLE_DATA_BUS_LOW    :in  std_logic;
-            DATA_BUS_LOW_INPUT           :in  std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
             INPUT_ENABLE_DATA_BUS_HIGH   :in  std_logic;
-            DATA_BUS_HIGH_INPUT          :in  std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
+            DATA_BUS_INPUT               :in  std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
             
             OUTPUT_ENABLE_DATA_BUS_LOW   :in  std_logic;
-            DATA_BUS_LOW_OUTPUT          :out std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
             OUTPUT_ENABLE_DATA_BUS_HIGH  :in  std_logic;
-            DATA_BUS_HIGH_OUTPUT         :out std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
+            DATA_BUS_OUTPUT              :out std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
             
             OUTPUT_ENABLE_ADDRESS_BUS    :in  std_logic;
             ADDRESS_BUS_OUTPUT           :out std_logic_vector(ADDRESS_BUS_LENGTH-1 downto 0)
@@ -192,14 +190,12 @@ package LAPILU_Modules_PKG is
             RESET                        :in  std_logic;
             
             INPUT_ENABLE_DATA_BUS_LOW    :in  std_logic;
-            DATA_BUS_LOW_INPUT           :in  std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
             INPUT_ENABLE_DATA_BUS_HIGH   :in  std_logic;
-            DATA_BUS_HIGH_INPUT          :in  std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
+            DATA_BUS_INPUT          :in  std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
             
             OUTPUT_ENABLE_DATA_BUS_LOW   :in  std_logic;
-            DATA_BUS_LOW_OUTPUT          :out std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
             OUTPUT_ENABLE_DATA_BUS_HIGH  :in  std_logic;
-            DATA_BUS_HIGH_OUTPUT         :out std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
+            DATA_BUS_OUTPUT         :out std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
             
             OUTPUT_ENABLE_ADDRESS_BUS    :in  std_logic;
             ADDRESS_BUS_OUTPUT           :out std_logic_vector(ADDRESS_BUS_LENGTH-1 downto 0)

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Apr  7 18:13:20 2020
+| Date         : Wed Apr  8 20:20:52 2020
 | Host         : Naboo running 64-bit Arch Linux
 | Command      : report_timing_summary -max_paths 10 -file LAPILU_timing_summary_routed.rpt -pb LAPILU_timing_summary_routed.pb -rpx LAPILU_timing_summary_routed.rpx -warn_on_violation
 | Design       : LAPILU
@@ -54,7 +54,45 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 0 register/latch pins with no clock.
+ There are 272 register/latch pins with no clock driven by root clock pin: CLOCK (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: CPU_RESET (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: CONTROL_SIGNAL_LOAD_FROM_DATA_BUS_TO_COUNTER_HIGH_reg/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: CONTROL_SIGNAL_LOAD_FROM_DATA_BUS_TO_COUNTER_LOW_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[0]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[10]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[11]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[12]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[13]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[14]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[15]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[1]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[2]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[3]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[4]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[5]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[6]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[7]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[8]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: PROGRAM_COUNTER/COUNT_INPUT_reg[9]/Q (HIGH)
 
 
 2. checking constant_clock
@@ -69,21 +107,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 0 pins that are not constrained for maximum delay.
+ There are 626 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 0 input ports with no input delay specified.
+ There are 9 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 0 ports with no output delay specified.
+ There are 25 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

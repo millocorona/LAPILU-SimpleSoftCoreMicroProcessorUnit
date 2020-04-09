@@ -51,8 +51,6 @@ begin
     process(CLOCK, RESET) begin
         if RESET = '1' then
             DATA_BUFFER<=std_logic_vector(to_unsigned(0,LENGTH));
-            ALU_BUS_OUT<=std_logic_vector(to_unsigned(0,LENGTH));
-            DATA_BUS_OUT<=std_logic_vector(to_unsigned(0,LENGTH));
         elsif rising_edge(CLOCK) then
             if LOAD_FROM_DATA_BUS = '1' then
                 DATA_BUFFER<=DATA_BUS_IN;
@@ -67,14 +65,8 @@ begin
             end if;
             if OUTPUT_ENABLE_TO_ALU = '1' then
                 ALU_BUS_OUT<=DATA_BUFFER;
-            else
-                ALU_BUS_OUT<=std_logic_vector(to_unsigned(0,LENGTH));
             end if;    
         end if;
     end process;
-    
-    
-    
-        
-    
+
 end NBitsAcumulatorArchitecture;
