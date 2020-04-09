@@ -49,29 +49,40 @@ The VHDL top entity has the following structure
 <br>
   <pre>
   <code>
-  entity LAPILU is
-      generic (
-          DATA_BUS_LENGTH    : integer := 8;
-          ADDRESS_BUS_LENGTH : integer := 16  
-      );
-      port (
-          CLOCK           : in     std_logic;
-          INVERTED_CLOCK  : out    std_logic;
-          DATA_BUS        : inout  std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
-          ADDRESS_BUS     : out    std_logic_vector (ADDRESS_BUS_LENGTH-1 downto 0);
-          RW              : out    std_logic;
-          IRQ             : in     std_logic;
-          NMI             : in     std_logic;
-          CPU_RESET       : in     std_logic
-      ); 
-  end LAPILU;
+    entity LAPILU is
+        generic (
+            DATA_BUS_LENGTH    : integer := 8; 
+            ADDRESS_BUS_LENGTH : integer := 16 
+        );
+        port (
+            CLOCK           : in     std_logic;
+            INVERTED_CLOCK  : out    std_logic;
+            DATA_BUS        : inout  std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+            ADDRESS_BUS     : out    std_logic_vector (ADDRESS_BUS_LENGTH-1 downto 0);
+            RW              : out    std_logic; --HIGH is READ,LOW is WRITE
+            IRQ             : in     std_logic;
+            CPU_RESET       : in     std_logic
+        ); 
+    end LAPILU;
   </code>
   </pre>
 ## Target devices
 
-In theory it should work on any FPGA but for development we use a Xilinx Nexys A7 (Nexys 4 DDR), and also
-the IDE we use is Xilinx Vivado 2019.2
-
+In theory it should work on any FPGA, and maybe some CPLD's but for development we use a Xilinx Nexys A7 (Nexys 4 DDR), and also the IDE we use is Xilinx Vivado 2019.2
+<br>
+<br>
+If you want to implement LAPILU in another device from Xilinx and you are using Vivado, probably you only need to clone the repository, open the project and change the setting to match your specific device, also replace the implementation contraints file as you need.
+<br>
+<br>
+If you want to implement LAPILU in another device from Xilinx and you are using ISE, only download the .src directory, create a new project and add the files to ISE, also replace the implementation contraints file as you need.
+<br>
+<br>
+If you want to implement LAPILU in another device from another vendor you only need the .src directory, create a project for your device and import the source code to the project, also create an implementation contraints file for your device as you need.
+<br>
+<br>
+The implementation and bitstream contained in this repository are generated for the Xilinx Nexys A7 (Nexys 4 DDR) 
+<br>
+<br>
 ## Architecture overview
 
 The architecture is based on the design of the MOS 6502 CPU (yes that's the famous CPU used in the NES, 
@@ -211,8 +222,6 @@ And the truth table that describes the behavior in each clock cycle is the follo
 <br>
 <img src="https://github.com/millocorona/LAPILU-SimpleSoftCoreMicroProcessorUnit/blob/master/LAPILU-SimpleSoftCoreMicroProcessorUnit.docs/Control%20logic/LAPILU-SimpleSoftCoreMicroProcessorUnit%20-%20Control%20logic.png">
 <br>
-<br>
-As you can see, it is not complete yet, we are currently working on that, we are going to keep this document updated as soon as we complete the table.
 <br>
 
 ## Instruction set and addressing modes
