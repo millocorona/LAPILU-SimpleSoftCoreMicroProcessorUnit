@@ -68,8 +68,7 @@ The VHDL top entity has the following structure
   </pre>
 ## Target devices
 
-In theory it should work on any FPGA but for development we use a Xilinx Nexys A7 (Nexys 4 DDR), and also
-the IDE we use is Xilinx Vivado 2019.2
+In theory it should work on any FPGA, and maybe some CPLD's but for development we use a Xilinx Nexys A7 (Nexys 4 DDR), and also the IDE we use is Xilinx Vivado 2019.2
 
 ## Architecture overview
 
