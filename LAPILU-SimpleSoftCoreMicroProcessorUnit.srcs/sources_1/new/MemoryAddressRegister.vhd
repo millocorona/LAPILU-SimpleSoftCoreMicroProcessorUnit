@@ -19,7 +19,6 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use work.Flip_Flops_PKG.ALL;
 use IEEE.numeric_std.all;
 
 entity MemoryAddressRegister is
@@ -61,13 +60,13 @@ begin
                     end if;
                 end loop;
                 for i in 0 to DATA_BUS_LENGTH-1 loop
-                    if i<ADDRESS_BUS_LENGTH-1 then
+                    if (DATA_BUS_LENGTH+i)<=ADDRESS_BUS_LENGTH-1 then
                         DATA_BUFFER(DATA_BUS_LENGTH+i)<='0';
                     end if;
                 end loop;     
             elsif INPUT_ENABLE_DATA_BUS_HIGH = '1' then
                 for i in 0 to DATA_BUS_LENGTH-1 loop
-                    if i<ADDRESS_BUS_LENGTH-1 then
+                    if (DATA_BUS_LENGTH+i)<=ADDRESS_BUS_LENGTH-1 then
                         DATA_BUFFER(DATA_BUS_LENGTH+i)<=DATA_BUS_INPUT(i);
                     end if;
                 end loop;
@@ -82,20 +81,16 @@ begin
                 end loop;
             elsif OUTPUT_ENABLE_DATA_BUS_HIGH = '1' then
                 for i in 0 to DATA_BUS_LENGTH-1 loop
-                    if i<ADDRESS_BUS_LENGTH-1 then
+                    if (DATA_BUS_LENGTH+i)<=ADDRESS_BUS_LENGTH-1 then
                         DATA_BUS_OUTPUT(i)<=DATA_BUFFER(DATA_BUS_LENGTH+i);
                     else
                         DATA_BUS_OUTPUT(i)<='0';
                     end if;
                 end loop;
-            else
-                DATA_BUS_OUTPUT<=std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH));
             end if;
             
             if OUTPUT_ENABLE_ADDRESS_BUS='1' then
                 ADDRESS_BUS_OUTPUT<=DATA_BUFFER;
-            else
-                ADDRESS_BUS_OUTPUT<=std_logic_vector(to_unsigned(0,ADDRESS_BUS_LENGTH)); 
             end if;
         end if;
     end process;

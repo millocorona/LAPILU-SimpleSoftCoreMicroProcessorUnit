@@ -63,11 +63,11 @@ end ProcessorStatusRegister;
 
 
 architecture ProcessorStatusRegisterArchitecture of ProcessorStatusRegister is
-       signal SIGNAL_BUFFER_FLAG_CARRY        : std_logic;
-       signal SIGNAL_BUFFER_FLAG_OVERFLOW     : std_logic;
-       signal SIGNAL_BUFFER_FLAG_ZERO         : std_logic;
-       signal SIGNAL_BUFFER_FLAG_NEGATIVE     : std_logic;
-       signal SIGNAL_BUFFER_FLAG_IRQ_DISABLE  : std_logic;
+       signal SIGNAL_BUFFER_FLAG_CARRY        : std_logic:='0';
+       signal SIGNAL_BUFFER_FLAG_OVERFLOW     : std_logic:='0';
+       signal SIGNAL_BUFFER_FLAG_ZERO         : std_logic:='0';
+       signal SIGNAL_BUFFER_FLAG_NEGATIVE     : std_logic:='0';
+       signal SIGNAL_BUFFER_FLAG_IRQ_DISABLE  : std_logic:='1';
 begin
 
     process(CLOCK, RESET) begin
@@ -141,8 +141,6 @@ begin
                 for i in 5 to DATA_BUS_LENGTH-1 loop
                     DATA_BUS_OUTPUT(i)<='0';
                 end loop;
-            else 
-                DATA_BUS_OUTPUT<=std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH));
             end if;
         end if;
     end process;

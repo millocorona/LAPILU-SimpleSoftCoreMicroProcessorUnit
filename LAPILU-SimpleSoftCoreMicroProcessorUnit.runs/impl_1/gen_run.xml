@@ -1,80 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1586395004">
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BITSTR-SYSDEF" Name="LAPILU.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="LAPILU.ltx"/>
-  <File Type="BG-BGN" Name="LAPILU.bgn"/>
-  <File Type="RBD_FILE" Name="LAPILU.rbd"/>
+  <File Type="ROUTE-PWR-RPX" Name="LAPILU_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="LAPILU_route_status.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="LAPILU_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="LAPILU_postroute_physopt_bb.dcp"/>
+  <File Type="RDI-RDI" Name="LAPILU.vdi"/>
+  <File Type="ROUTE-STATUS-PB" Name="LAPILU_route_status.pb"/>
+  <File Type="BG-BIT" Name="LAPILU.bit"/>
+  <File Type="RCFI_FILE" Name="LAPILU.rcfi"/>
   <File Type="BG-DRC" Name="LAPILU.drc"/>
   <File Type="NPI_FILE" Name="LAPILU.npi"/>
-  <File Type="RNPI_FILE" Name="LAPILU.rnpi"/>
-  <File Type="CFI_FILE" Name="LAPILU.cfi"/>
+  <File Type="BITSTR-LTX" Name="LAPILU.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-SYSDEF" Name="LAPILU.sysdef"/>
+  <File Type="BG-BGN" Name="LAPILU.bgn"/>
+  <File Type="RBD_FILE" Name="LAPILU.rbd"/>
   <File Type="PDI-FILE" Name="LAPILU.pdi"/>
-  <File Type="BITSTR-MMI" Name="LAPILU.mmi"/>
-  <File Type="BITSTR-BMM" Name="LAPILU_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="LAPILU.nky"/>
-  <File Type="BITSTR-RBT" Name="LAPILU.rbt"/>
-  <File Type="BITSTR-MSK" Name="LAPILU.msk"/>
-  <File Type="BG-BIN" Name="LAPILU.bin"/>
-  <File Type="RCFI_FILE" Name="LAPILU.rcfi"/>
-  <File Type="BG-BIT" Name="LAPILU.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="LAPILU_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="LAPILU_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="LAPILU_bus_skew_postroute_physopted.rpt"/>
-  <File Type="RDI-RDI" Name="LAPILU.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="LAPILU_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="LAPILU_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="LAPILU_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="LAPILU_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="LAPILU_postroute_physopt.dcp"/>
   <File Type="ROUTE-BUS-SKEW" Name="LAPILU_bus_skew_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="LAPILU.mmi"/>
   <File Type="ROUTE-CLK" Name="LAPILU_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="LAPILU_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="LAPILU_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="LAPILU_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="LAPILU_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="LAPILU_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="LAPILU_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="LAPILU_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="LAPILU_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="LAPILU_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="LAPILU_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="LAPILU_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="LAPILU_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="LAPILU_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="LAPILU_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="LAPILU_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="LAPILU_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="LAPILU_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="LAPILU_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="LAPILU_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="LAPILU_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="LAPILU_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="LAPILU_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="BITSTR-BMM" Name="LAPILU_bd.bmm"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="LAPILU_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="LAPILU_timing_summary_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="LAPILU_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="LAPILU_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-CTRL" Name="LAPILU_control_sets_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="LAPILU_utilization_placed.pb"/>
   <File Type="PLACE-UTIL" Name="LAPILU_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="LAPILU_clock_utilization_placed.rpt"/>
   <File Type="PLACE-IO" Name="LAPILU_io_placed.rpt"/>
   <File Type="PLACE-DCP" Name="LAPILU_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="LAPILU_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="LAPILU_drc_pwropted.rpt"/>
   <File Type="PWROPT-DCP" Name="LAPILU_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="LAPILU_timing_summary_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="LAPILU.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="LAPILU_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="LAPILU_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="LAPILU_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="LAPILU_timing_summary_init.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="LAPILU_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="LAPILU_reports.tcl"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="LAPILU_bus_skew_routed.pb"/>
   <File Type="PA-TCL" Name="LAPILU.tcl"/>
+  <File Type="BITSTR-MSK" Name="LAPILU.msk"/>
+  <File Type="CFI_FILE" Name="LAPILU.cfi"/>
+  <File Type="ROUTE-TIMING-PB" Name="LAPILU_timing_summary_routed.pb"/>
+  <File Type="PHYSOPT-DCP" Name="LAPILU_physopt.dcp"/>
+  <File Type="BITSTR-RBT" Name="LAPILU.rbt"/>
+  <File Type="RNPI_FILE" Name="LAPILU.rnpi"/>
+  <File Type="ROUTE-TIMING-RPX" Name="LAPILU_timing_summary_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="LAPILU_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="LAPILU_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="LAPILU_opt.dcp"/>
+  <File Type="OPT-DRC" Name="LAPILU_drc_opted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="LAPILU_routed_error.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="LAPILU_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DCP" Name="LAPILU_routed.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="LAPILU_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="LAPILU_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="LAPILU_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="LAPILU_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="LAPILU_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="LAPILU_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-PWR" Name="LAPILU_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="LAPILU_power_summary_routed.pb"/>
+  <File Type="BG-BIN" Name="LAPILU.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="LAPILU_timing_summary_routed.rpt"/>
+  <File Type="BITSTR-NKY" Name="LAPILU.nky"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/LAPILU_Aritmetic_Components_PKG.vhd">
@@ -204,5 +185,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

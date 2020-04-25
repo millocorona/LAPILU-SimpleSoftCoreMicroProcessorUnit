@@ -33,20 +33,20 @@ entity StepCounter is
         CLOCK                        :in  std_logic;
         RESET                        :in  std_logic;
         COUNT_ENABLE                 :in  std_logic;
-        INSTRUCTION_DECODER_OUTPUT   :out std_logic_vector(3 downto 0)
+        INSTRUCTION_DECODER_OUTPUT   :out std_logic_vector(4 downto 0)
         
     );
     
 end StepCounter;
 
 architecture StepCounterArchitecture of StepCounter is
-    signal COUNT : std_logic_vector(3 downto 0);
-    signal Ts    : std_logic_vector(4 downto 0);    
+    signal COUNT : std_logic_vector(4 downto 0);
+    signal Ts    : std_logic_vector(5 downto 0);    
 begin
     
     Ts(0)<=COUNT_ENABLE;
     FOR_TO_GENERATE_FLIP_FLOPS_T:
-        for i in 0 to 3 
+        for i in 0 to 4 
             generate
                 FLIP_FLOP_T_i: entity work.TFlipFlop port map(CLOCK=>CLOCK,RESET=>RESET,LOAD=>'0',DATA=>'0',T=>Ts(i),Q=>COUNT(i));
                 Ts(i+1)<=Ts(i) and COUNT(i);

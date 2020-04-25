@@ -1,0 +1,20 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU_Aritmetic_Components_PKG.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsFullAdder.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsZeroIdentifier.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/AritmeticLogicUnit.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/FlipFlopT.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/Flip_Flops_PKG.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU_Modules_PKG.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsAcumulator.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/NBitsRegister.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProgramCounter.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StepCounter.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/ProcessorStatusRegister.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/StackPointerRegister.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/MemoryAddressRegister.vhd" \
+"../../../../LAPILU-SimpleSoftCoreMicroProcessorUnit.srcs/sources_1/new/LAPILU.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="LAPILU_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="LAPILU" />
+            <top_module name="flip_flops_pkg" />
+            <top_module name="lapilu_aritmetic_components_pkg" />
+            <top_module name="lapilu_modules_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1784001fs"></ZoomEndTime>
+      <Cursor1Time time="350000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="281"></NameColumnWidth>
+      <ValueColumnWidth column_width="102"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject type="logic" fp_name="/LAPILU/CLOCK">
+      <obj_property name="ElementShortName">CLOCK</obj_property>
+      <obj_property name="ObjectShortName">CLOCK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LAPILU/INVERTED_CLOCK_SIGNAL">
+      <obj_property name="ElementShortName">INVERTED_CLOCK_SIGNAL</obj_property>
+      <obj_property name="ObjectShortName">INVERTED_CLOCK_SIGNAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LAPILU/CPU_RESET">
+      <obj_property name="ElementShortName">CPU_RESET</obj_property>
+      <obj_property name="ObjectShortName">CPU_RESET</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LAPILU/RW">
+      <obj_property name="ElementShortName">RW</obj_property>
+      <obj_property name="ObjectShortName">RW</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LAPILU/CONTROL_SIGNAL_READ_OR_WRITE">
+      <obj_property name="ElementShortName">CONTROL_SIGNAL_READ_OR_WRITE</obj_property>
+      <obj_property name="ObjectShortName">CONTROL_SIGNAL_READ_OR_WRITE</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LAPILU/DATA_BUS">
+      <obj_property name="ElementShortName">DATA_BUS[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_BUS[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LAPILU/DATA_BUS_SIGNAL">
+      <obj_property name="ElementShortName">DATA_BUS_SIGNAL[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_BUS_SIGNAL[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LAPILU/ADDRESS_BUS">
+      <obj_property name="ElementShortName">ADDRESS_BUS[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDRESS_BUS[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LAPILU/ADDRESS_BUS_SIGNAL">
+      <obj_property name="ElementShortName">ADDRESS_BUS_SIGNAL[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDRESS_BUS_SIGNAL[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LAPILU/PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT">
+      <obj_property name="ElementShortName">PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PROGRAM_COUNTER_ADDRESS_BUS_OUTPUT[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LAPILU/CONTROL_SIGNAL_COUNTER_ENABLE">
+      <obj_property name="ElementShortName">CONTROL_SIGNAL_COUNTER_ENABLE</obj_property>
+      <obj_property name="ObjectShortName">CONTROL_SIGNAL_COUNTER_ENABLE</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LAPILU/CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_HIGH_TO_DATA_BUS">
+      <obj_property name="ElementShortName">CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_HIGH_TO_DATA_BUS</obj_property>
+      <obj_property name="ObjectShortName">CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_HIGH_TO_DATA_BUS</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LAPILU/CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_LOW_TO_DATA_BUS">
+      <obj_property name="ElementShortName">CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_LOW_TO_DATA_BUS</obj_property>
+      <obj_property name="ObjectShortName">CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_LOW_TO_DATA_BUS</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LAPILU/CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_TO_ADDRESS_BUS">
+      <obj_property name="ElementShortName">CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_TO_ADDRESS_BUS</obj_property>
+      <obj_property name="ObjectShortName">CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_COUNTER_TO_ADDRESS_BUS</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LAPILU/PROGRAM_COUNTER_DATA_BUS_OUTPUT">
+      <obj_property name="ElementShortName">PROGRAM_COUNTER_DATA_BUS_OUTPUT[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PROGRAM_COUNTER_DATA_BUS_OUTPUT[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LAPILU/INTERCONECT_STEP_COUNTER_OUT_TO_INSTRUCTION_DECODER_IN">
+      <obj_property name="ElementShortName">INTERCONECT_STEP_COUNTER_OUT_TO_INSTRUCTION_DECODER_IN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">INTERCONECT_STEP_COUNTER_OUT_TO_INSTRUCTION_DECODER_IN[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LAPILU/CONTROL_SIGNAL_STEP_COUNTER_RESET">
+      <obj_property name="ElementShortName">CONTROL_SIGNAL_STEP_COUNTER_RESET</obj_property>
+      <obj_property name="ObjectShortName">CONTROL_SIGNAL_STEP_COUNTER_RESET</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/LAPILU/INTERCONECT_INSTRUCTION_REGISTER_OUT_TO_INSTRUCTION_DECODER_IN">
+      <obj_property name="ElementShortName">INTERCONECT_INSTRUCTION_REGISTER_OUT_TO_INSTRUCTION_DECODER_IN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">INTERCONECT_INSTRUCTION_REGISTER_OUT_TO_INSTRUCTION_DECODER_IN[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/LAPILU/CONTROL_SIGNAL_INSTRUCTION_REGISTER_LOAD">
+      <obj_property name="ElementShortName">CONTROL_SIGNAL_INSTRUCTION_REGISTER_LOAD</obj_property>
+      <obj_property name="ObjectShortName">CONTROL_SIGNAL_INSTRUCTION_REGISTER_LOAD</obj_property>
+   </wvobject>
+</wave_config>

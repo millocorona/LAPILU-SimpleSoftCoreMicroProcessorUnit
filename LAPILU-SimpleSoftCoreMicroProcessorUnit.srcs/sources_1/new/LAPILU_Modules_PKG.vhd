@@ -29,7 +29,6 @@ package LAPILU_Modules_PKG is
         LENGTH                 : integer := 8
         );
         port (
-            RESET                    : in  std_logic;
             OUT_ENABLE_TO_DATA_BUS   : in  std_logic;
             OUT_ENABLE_TO_ACUMULATOR : in  std_logic;
             OPERATION                : in  std_logic_vector (3 downto 0);
@@ -201,5 +200,31 @@ package LAPILU_Modules_PKG is
             ADDRESS_BUS_OUTPUT           :out std_logic_vector(ADDRESS_BUS_LENGTH-1 downto 0)
             
         );
-    end component;    
+    end component;  
+    
+    component InstructionRegister is
+        generic (
+            LENGTH       : integer := 8
+        );
+        port (  
+            CLOCK         : in std_logic;
+            RESET         : in std_logic; 
+            LOAD          : in std_logic;
+            DATA_INPUT    : in  std_logic_vector (LENGTH-1 downto 0);
+            DATA_OUTPUT   : out std_logic_vector (LENGTH-1 downto 0)
+        );
+    end component;  
+    
+    component RegisterB is
+        generic (
+            LENGTH       : integer := 8
+        );
+        port (  
+            CLOCK         : in std_logic;
+            RESET         : in std_logic; 
+            LOAD          : in std_logic;
+            DATA_INPUT    : in  std_logic_vector (LENGTH-1 downto 0);
+            DATA_OUTPUT   : out std_logic_vector (LENGTH-1 downto 0)
+        );
+    end component;
 end LAPILU_Modules_PKG;

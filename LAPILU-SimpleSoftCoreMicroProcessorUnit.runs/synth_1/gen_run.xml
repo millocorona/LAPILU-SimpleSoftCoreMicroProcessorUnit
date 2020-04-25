@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1586395004">
-  <File Type="VDS-TIMING-PB" Name="LAPILU_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="LAPILU_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="LAPILU.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="LAPILU_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="LAPILU_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="LAPILU_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="LAPILU.vds"/>
   <File Type="REPORTS-TCL" Name="LAPILU_reports.tcl"/>
   <File Type="PA-TCL" Name="LAPILU.tcl"/>
+  <File Type="RDS-DCP" Name="LAPILU.dcp"/>
+  <File Type="RDS-RDS" Name="LAPILU.vds"/>
+  <File Type="RDS-UTIL-PB" Name="LAPILU_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="LAPILU_utilization_synth.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/LAPILU_Aritmetic_Components_PKG.vhd">

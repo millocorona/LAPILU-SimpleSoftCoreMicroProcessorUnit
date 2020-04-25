@@ -49,10 +49,9 @@ end StackPointerRegister;
 
 
 architecture StackPointerRegisterArchitecture of StackPointerRegister is
-    signal DATA_BUFFER         : std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+    signal DATA_BUFFER         : std_logic_vector (DATA_BUS_LENGTH-1 downto 0):=std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH));
     signal ADDER_RESULT_BUFFER : std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
     signal ADDER_B_OPERAND     : std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
-    signal ADDER_CARRY_IN      : std_logic;
 begin
     
     NBitsFullAdder: 
@@ -61,45 +60,37 @@ begin
                 LENGTH   => DATA_BUS_LENGTH
             )
             port map (
-                A_OPERAND  => DATA_BUFFER,
-                B_OPERAND  => ADDER_B_OPERAND,
-                CARRY_IN   => ADDER_CARRY_IN,
-                SUM        => ADDER_RESULT_BUFFER,
-                CARRY_PENULTIMATE_BIT => open,
-                CARRY_OUT  => open
+                A_OPERAND     => DATA_BUFFER,
+                B_OPERAND     => ADDER_B_OPERAND,
+                CARRY_IN      => '1',
+                SUM           => ADDER_RESULT_BUFFER,
+                OVERFLOW_FLAG => open,
+                CARRY_OUT     => open
             );
     
+    ADDER_B_OPERAND<= std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH))              when (INCREMENT_STACK_POINTER = '1') else
+                      not (std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH-1))&'1')  when (DECREMENT_STACK_POINTER = '1');
     process(CLOCK, RESET) begin
         if RESET = '1' then
             DATA_BUFFER<=std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH)); 
         elsif rising_edge(CLOCK) then
-            if INCREMENT_STACK_POINTER = '1' then
-                ADDER_CARRY_IN<='1';
-                ADDER_B_OPERAND<= STD_LOGIC_VECTOR(TO_UNSIGNED(0,DATA_BUS_LENGTH));
-                DATA_BUFFER<=ADDER_RESULT_BUFFER;
-            elsif DECREMENT_STACK_POINTER = '1' then
-                ADDER_CARRY_IN<='1';
-                ADDER_B_OPERAND<=not (STD_LOGIC_VECTOR(TO_UNSIGNED(0,DATA_BUS_LENGTH-1))&'1');
+            if INCREMENT_STACK_POINTER = '1' or DECREMENT_STACK_POINTER = '1' then
                 DATA_BUFFER<=ADDER_RESULT_BUFFER;
             end if;
-        
             if LOAD_FROM_DATA_BUS = '1' then
                 DATA_BUFFER <= DATA_INPUT_FROM_DATA_BUS; 
             end if;
             if OUTPUT_ENABLE_TO_DATA_BUS = '1' then
                 DATA_OUTPUT_TO_DATA_BUS<=DATA_BUFFER;
-            else
-               DATA_OUTPUT_TO_DATA_BUS<=std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH));
             end if;
             if OUTPUT_ENABLE_TO_ADDRESS_BUS = '1' then
                 for i in 0 to DATA_BUS_LENGTH-1 loop
                      DATA_OUTPUT_TO_ADDRESS_BUS(i)<=DATA_BUFFER(i);
                 end loop;
-                for i in DATA_BUS_LENGTH to ADDRESS_BUS_LENGTH-1 loop
-                     DATA_OUTPUT_TO_ADDRESS_BUS(i)<='1';
+                DATA_OUTPUT_TO_ADDRESS_BUS(DATA_BUS_LENGTH)<='1';
+                for i in DATA_BUS_LENGTH+1 to ADDRESS_BUS_LENGTH-1 loop
+                     DATA_OUTPUT_TO_ADDRESS_BUS(i)<='0';
                 end loop;
-            else
-                DATA_OUTPUT_TO_ADDRESS_BUS<=std_logic_vector(to_unsigned(0,ADDRESS_BUS_LENGTH));
             end if;
         end if;
     end process;

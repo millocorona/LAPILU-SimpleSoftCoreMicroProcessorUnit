@@ -22,32 +22,30 @@ use IEEE.STD_LOGIC_1164.ALL;
  
 entity TFlipFlop is
     port(
-        CLOCK :in std_logic;
-        RESET :in std_logic;
+        CLOCK  :in std_logic;
+        RESET  :in std_logic;
         
-        LOAD  :in std_logic;
-        DATA  :in std_logic;
+        LOAD   :in std_logic;
+        DATA   :in std_logic;
         
-        T     :in std_logic;
-        Q     :out std_logic
+        T      :in std_logic;
+        Q      :out std_logic
     );
 end TFlipFlop;
  
 architecture TFlipFlopArchitecture of TFlipFlop is
-    signal TEMP: std_logic;
+    signal TEMP: std_logic:='0';
 begin
-    process (CLOCK,RESET) begin
+    process (CLOCK,RESET,LOAD) begin
         if RESET = '1' then 
             TEMP<='0';
         elsif LOAD = '1' then
             TEMP<=DATA;
         elsif rising_edge(CLOCK) then 
-            if T='0' then
-                TEMP <= TEMP;
-            elsif T='1' then
-                TEMP <= not (TEMP);
-            end if;
+            IF T = '1' THEN
+                TEMP <= not TEMP;
+            END IF;
         end if;
-        Q <= TEMP;
     end process;
+    Q <= TEMP;
 end TFlipFlopArchitecture;

@@ -42,7 +42,7 @@ architecture NBitsRegisterArchitecture of NBitsRegister is
     signal DATA_BUFFER : std_logic_vector (LENGTH-1 downto 0);
 begin
 
-    process(CLOCK, RESET) begin
+    process(CLOCK, RESET,DATA_BUFFER,LOAD,OUTPUT_ENABLE) begin
         if RESET = '1' then
             DATA_BUFFER<=std_logic_vector(to_unsigned(0,LENGTH)); 
         elsif rising_edge(CLOCK) then
@@ -51,8 +51,6 @@ begin
             end if;
             if OUTPUT_ENABLE = '1' then
                 DATA_OUTPUT<=DATA_BUFFER;
-            else
-                DATA_OUTPUT<=std_logic_vector(to_unsigned(0,LENGTH));
             end if;
         end if;
     end process;

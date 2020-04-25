@@ -32,7 +32,7 @@ package LAPILU_Aritmetic_Components_PKG is
             B_OPERAND             : in std_logic_vector (LENGTH-1 downto 0);
             CARRY_IN              : in std_logic;
             SUM                   : out std_logic_vector (LENGTH-1 downto 0);
-            CARRY_PENULTIMATE_BIT : out std_logic;
+            OVERFLOW_FLAG         : out std_logic;
             CARRY_OUT             : out std_logic
         );
     end component;

@@ -99,14 +99,10 @@ begin
                         DATA_BUS_OUTPUT(i)<='0';
                     end if;
                 end loop;
-            else 
-                DATA_BUS_OUTPUT<=std_logic_vector(to_unsigned(0,DATA_BUS_LENGTH)); 
             end if;
             
             if OUTPUT_ENABLE_ADDRESS_BUS='1' then
                 ADDRESS_BUS_OUTPUT<=COUNT_OUTPUT;
-            else 
-                ADDRESS_BUS_OUTPUT<=std_logic_vector(to_unsigned(0,ADDRESS_BUS_LENGTH)); 
             end if;
         end if;
     end process;

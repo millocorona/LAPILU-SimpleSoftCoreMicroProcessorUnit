@@ -8,7 +8,7 @@
 -- Project Name:LAPILU-SimpleSoftcoreMicroProcessorUnit 
 -- Target Devices: NEXYS-A7, NEXYS-4 DDR
 -- Tool Versions: Vivado 2019.2
--- Description: N-bits full adder using one bits adder in a chain
+-- Description: N-bits full adder using one bit adders in a chain
 -- 
 -- Dependencies: 
 -- 
@@ -56,7 +56,7 @@ entity NBitsFullAdder is
         B_OPERAND             : in std_logic_vector (LENGTH-1 downto 0);
         CARRY_IN              : in std_logic;
         SUM                   : out std_logic_vector (LENGTH-1 downto 0);
-        CARRY_PENULTIMATE_BIT : out std_logic;
+        OVERFLOW_FLAG         : out std_logic;
         CARRY_OUT             : out std_logic
     );
 end NBitsFullAdder;
@@ -78,11 +78,11 @@ begin
 
     CARRYS(0) <= CARRY_IN;
     CARRY_OUT <= CARRYS(LENGTH);  
-    CARRY_PENULTIMATE_BIT <= CARRYS(LENGTH-1);
+    OVERFLOW_FLAG<= not (((A_OPERAND(LENGTH-1) nor B_OPERAND(LENGTH-1)) and CARRYS(LENGTH-1)) nor ((A_OPERAND(LENGTH-1) nand B_OPERAND(LENGTH-1)) nor CARRYS(LENGTH-1)));
     FOR_TO_GENERATE_ADDERS: 
         for i in 0 to LENGTH-1
             generate
-                ADDER_i:OneBitFullAdder PORT MAP (A_OPERAND(i),B_OPERAND(i),CARRYS(i),SUM(i),CARRYS(i+1));
+                ADDER_i:OneBitFullAdder PORT MAP (A_OPERAND=>A_OPERAND(i),B_OPERAND=>B_OPERAND(i),CARRY_IN=>CARRYS(i),SUM=>SUM(i),CARRY_OUT=>CARRYS(i+1));
             end generate;
     
 end NBitsFullAdderArchitecture;
