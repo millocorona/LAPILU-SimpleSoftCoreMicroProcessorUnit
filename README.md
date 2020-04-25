@@ -50,19 +50,20 @@ The VHDL top entity has the following structure
   <pre>
   <code>
     entity LAPILU is
-        generic (
-            DATA_BUS_LENGTH    : integer := 8; 
-            ADDRESS_BUS_LENGTH : integer := 16 
-        );
-        port (
-            CLOCK           : in     std_logic;
-            INVERTED_CLOCK  : out    std_logic;
-            DATA_BUS        : inout  std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
-            ADDRESS_BUS     : out    std_logic_vector (ADDRESS_BUS_LENGTH-1 downto 0);
-            RW              : out    std_logic; --HIGH is READ,LOW is WRITE
-            IRQ             : in     std_logic;
-            CPU_RESET       : in     std_logic
-        ); 
+      generic (
+          DATA_BUS_LENGTH    : integer := 8; 
+          ADDRESS_BUS_LENGTH : integer := 16   
+      );
+      port (
+          CLOCK           : in     std_logic;
+          INVERTED_CLOCK  : in     std_logic;
+          DATA_BUS_IN     : in     std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+          DATA_BUS_OUT    : out    std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
+          ADDRESS_BUS     : out    std_logic_vector (ADDRESS_BUS_LENGTH-1 downto 0);
+          RW              : out    std_logic;
+          IRQ             : in     std_logic;
+          CPU_RESET       : in     std_logic
+      ); 
     end LAPILU;
   </code>
   </pre>
@@ -105,7 +106,7 @@ Here we need to explain two thing about how the buses work in LAPILU:
 
 <ol>
   <li>The data bus can be N-Bit but N needs to be an <b>even number greater or equal to 8</b> (Why? see the instruction register section).</li>
-  <li>The Address bus can be M-Bit but <b>M needs to be between N and 2 times N </b> (N<=M<=2N) (Why? see the Program counter section).</li>
+  <li>The Address bus can be M-Bit but <b>M needs to be between N+1 and 2 times N </b> (N+1<=M<=2N) (Why? see the Program counter section and the stack pointer section).</li>
 </ol>
 
 ### Register X and Y
@@ -157,16 +158,17 @@ The purpose of this register is to store the value of the pointer to the stack.
 
 <b>But how the stack and the stack pointer works in LAPILU?</b>
 
-Well as you can see in the architecture diagram, <b> the stack pointer is only N bits long but its purpose is to save a memory address and
-that could be M bits long and M could be between N and 2N</b> so, how it works?
+Well as you can see in the architecture diagram, <b> the stack pointer is only N bits long but its purpose is to save a memory address and it could be M bits long and M could be between N+1 and 2N</b> so, how it works?
 
-The answer is easy, the remaining most significant bits are assumed as 1 so for example, 
+The answer is easy, the remaining most significant bits are assumed to be the decimal value 1 so for example, 
 considering an 8 bit data bus and an 16 bit address bus, the stack will be in the memory map 
-from 0xFF00 to 0xFFFF or in binary from
+from 0x0100 to 0x01FF or in binary form
 <br>
-1111 1111 1111 1111 0000 0000 0000 0000 to 1111 1111 1111 1111 1111 1111 1111 1111 
+from 0000 0000 0000 0001 0000 0000 0000 0000 to 1111 1111 1111 1111 1111 1111 1111 1111 
 <br>
-the same rules applies to every other configuration of the buses.
+Also, <b>thats why the minimum value of M is N+1 because we need at least one bit more than N to fix the stack to that part of the memory map</b>
+
+The same rules applies to every other configuration of the buses.
 
 ### Step counter
 
@@ -178,7 +180,7 @@ determine wich step of the instruction is been executed
 The purpose of these register is to hold the binary representation of the instruction 
 we are currently executing and make it available to the instruction decoder so it can handle it.
 
-This register has a fixed size of 8 bits, thats why the minimum size of the data bus needs to be 8.
+<b>This register has a fixed size of 8 bits, thats why the minimum size of the data bus needs to be 8.</b>
 
 ### Processor status register
 
@@ -231,7 +233,6 @@ And the truth table that describes the behavior in each clock cycle is the follo
 <img src="https://github.com/millocorona/LAPILU-SimpleSoftCoreMicroProcessorUnit/blob/master/LAPILU-SimpleSoftCoreMicroProcessorUnit.docs/Instruction%20set/LAPILU%20-%20SimpleSoftCoreMicroProcessorUnit%20-%20Instruction%20set.png">
 <img src="https://github.com/millocorona/LAPILU-SimpleSoftCoreMicroProcessorUnit/blob/master/LAPILU-SimpleSoftCoreMicroProcessorUnit.docs/Instruction%20set/LAPILU-SimpleSoftCoreMicroProcessorUnit%20-%20Instruction%20set%20color%20anotations.png">
 
-<i>Note: The clock cycle count will be added when the control logic truth table is completed</i>
 
 <b>The addressing modes</b> 
 
@@ -251,13 +252,12 @@ LAPILU offers the following addressing modes:
     an instruction in absolute addressing mode would look like LDA $003A and this will consume more clock cycles to execute, but using the
     Zero - Page addressing mode you can write only LDA $3A and they will do the aparently same, but it will save some clock cycles. To 
     keep it simple, it can be said that the Zero-Page addressing mode can be used when the address you are trying to access 
-    can be represented with the least significant N bits
+    can be represented with the N least significant bits
   </li>
 </ol>
 
 ## Interrupts
-
-  The interrupt logic is still not implemented, when the control logic is finished this will be the primary focus.
+  This is currently in the works
   
 At this point we already finished the overview of the project, now more questions.
 
@@ -266,7 +266,8 @@ At this point we already finished the overview of the project, now more question
 <ul>
   <li>
     Things completed
-    <ul>
+    <ul> 
+        <li><b>LAPILU is Turing Complete<</b>/li>
         <li>Register X</li>
         <li>Register Y</li>
         <li>Acumulator</li>
@@ -278,19 +279,19 @@ At this point we already finished the overview of the project, now more question
         <li>Step counter</li>
         <li>Instruction register</li>
         <li>Processor status register</li>
+        <li>Instruction decoder (Control logic)</li>
     </ul>
   </li>
   <li>
     Things missing
       <ul>
-        <li>Instruction decoder</li>
         <li>Interrupts</li>
       </ul>
   </li>
   <li>
     Things in the works
       <ul>
-        <li>Instruction decoder</li>
+        <li>Interrupts</li>
       </ul>
   </li>
   <li>
