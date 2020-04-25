@@ -27,7 +27,7 @@ use IEEE.numeric_std.all;
 entity LAPILU is
     generic (
         DATA_BUS_LENGTH    : integer := 8; -- This value needs to be an even number GRATER OR EQUAL TO 8 
-        ADDRESS_BUS_LENGTH : integer := 16 -- This value, should be between DATA_BUS_LENGTH and 2 * DATA_BUS_LENGTH, 
+        ADDRESS_BUS_LENGTH : integer := 16 -- This value, should be between DATA_BUS_LENGTH+1 and 2 * DATA_BUS_LENGTH, 
                                            -- due to how the program counter, memory address register and stack pointer works  
     );
     port (
