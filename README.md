@@ -267,7 +267,7 @@ At this point we already finished the overview of the project, now more question
   <li>
     Things completed
     <ul> 
-        <li><b>LAPILU is Turing Complete<</b>/li>
+        <li><b>LAPILU is Turing Complete</b></li>
         <li>Register X</li>
         <li>Register Y</li>
         <li>Acumulator</li>
