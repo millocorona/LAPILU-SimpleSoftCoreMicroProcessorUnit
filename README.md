@@ -280,7 +280,7 @@ Also, <b>thats why the minimum value of M is N+2 because,we need 2 more bits tha
 As we previously mention, when an interrupt is triggered, the CPU will continue the program execution from the address 0x0200, thats until it finds a RETI instruction, when this instruction is executed, the CPU will return to the state that it had before the interrupt was triggered (popping from the stack the previous values), and it will continue with the execution of the program normally.
 <br>
 <br>
-Is worth saying that the CPU will stop listening to interrupts when an interrupt is already executing
+Is worth saying that the CPU will stop listening to interrupts when an interrupt is already executing.
 <br>
 <br>
 <br>
