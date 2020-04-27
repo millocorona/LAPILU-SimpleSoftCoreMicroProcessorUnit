@@ -227,4 +227,20 @@ package LAPILU_Modules_PKG is
             DATA_OUTPUT   : out std_logic_vector (LENGTH-1 downto 0)
         );
     end component;
+    
+    component InterruptHandler is 
+        generic (
+            DATA_BUS_LENGTH       : integer := 8;
+            ADDRESS_BUS_LENGTH    : integer := 16
+        ); 
+        port (
+            RESET                                           : in  std_logic;
+            IRQ                                             : in  std_logic;
+            IRQ_DISABLE_FLAG                                : in  std_logic;
+            IRQ_PENDING                                     : out std_logic;
+            OUTPUT_ENABLE_INTERRUPT_VECTOR_LOW_TO_DATA_BUS  : in  std_logic;
+            OUTPUT_ENABLE_INTERRUPT_VECTOR_HIGH_TO_DATA_BUS : in  std_logic;
+            INTERRUPT_VECTOR_DATA_BUS_OUTPUT                : out std_logic_vector(DATA_BUS_LENGTH-1 downto 0)
+         );
+    end component;
 end LAPILU_Modules_PKG;
