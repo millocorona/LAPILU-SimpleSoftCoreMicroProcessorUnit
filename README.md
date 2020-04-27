@@ -261,19 +261,27 @@ LAPILU offers the following addressing modes:
 
 To indicate an interrupt to LAPILU the IRQ pin needs to go from 0 to 1, if the I flag is turned off (allowing interrupts), the CPU will complete the instruction that is currently executing, after that, it will push the values of the acumulator, register X , register Y, the processor status register, and program counter onto the stack, then, it will jump to the address located at the first memory address after the end of the stack (interrupt vector), and it will continue the execution from that point.
 <br>
+<br>
 To ilustrate the location of the interrupt vector lets see an example, assuming a CPU configuration of and 8 bit data bus and a 16 bit address bus, we already know that the stack is located from the address 0x0100 to 0x01FF or in binary form
+<br>
 <br>
 from 0000 0000 0000 0001 0000 0000 0000 0000 to 0000 0000 0000 0001 1111 1111 1111 1111 
 <br>
+<br>
 so, the interrupt vector will ve located at 0x0200 or in binary form
+<br>
 <br>
 0000 0000 0000 0010 0000 0000 0000 0000 
 <br>
+<br>
 Also, <b>thats why the minimum value of M is N+2 because,we need 2 more bits than the data bus to fix the interrupt vector to that direction in the memory map.</b> 
+<br>
 <br>
 As we previously mention, when an interrupt is triggered, the CPU will continue the program execution from the address 0x0200, thats until it finds a RETI instruction, when this instruction is executed, the CPU will return to the state that it had before the interrupt was triggered (popping from the stack the previous values), and it will continue with the execution of the program normally.
 <br>
+<br>
 Is worth saying that the CPU will stop listening to interrupts when an interrupt is already executing
+<br>
 <br>
 <br>
 At this point we already finished the overview of the project, now more questions.
