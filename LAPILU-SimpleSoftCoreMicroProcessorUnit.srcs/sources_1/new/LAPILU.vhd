@@ -188,6 +188,7 @@ architecture LAPILU_Architecture of LAPILU is
     --Interrupt handler 
     
     --Control
+    signal CONTROL_SIGNAL_INTERRUPT_HANDLER_RESET                                                                         : std_logic;
     signal CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_LOW_TO_DATA_BUS                        : std_logic:='0';
     signal CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_HIGH_TO_DATA_BUS                       : std_logic:='0';
     
@@ -449,10 +450,10 @@ begin
                 ADDRESS_BUS_LENGTH => ADDRESS_BUS_LENGTH
             )
             port map(
-                RESET=> CPU_RESET,
+                RESET=> CONTROL_SIGNAL_INTERRUPT_HANDLER_RESET,
                 IRQ => IRQ,
                 IRQ_DISABLE_FLAG => INTERCONECT_SIGNAL_PROCESSOR_STATUS_REGISTER_IRQ_DISABLE_FLAG_OUT_TO_INTERRUPT_HANDLER_IRQ_DISABLE_FLAG_IN,
-                IRQ_PENDING => INTERCONECT_INTERRUPT_HANDLER_IRQ_PENDING_OUT_TO_INSTRUCTION_DECODER_IN,
+                IRQ_PENDING => INTERCONECT_INTERRUPT_HANDLER_IRQ_PENDING_OUT_TO_INSTRUCTION_DECODER_IN,                
                 OUTPUT_ENABLE_INTERRUPT_VECTOR_LOW_TO_DATA_BUS => CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_LOW_TO_DATA_BUS,
                 OUTPUT_ENABLE_INTERRUPT_VECTOR_HIGH_TO_DATA_BUS => CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_HIGH_TO_DATA_BUS,
                 INTERRUPT_VECTOR_DATA_BUS_OUTPUT => INTERRUPT_HANDLER_DATA_BUS_OUTPUT
@@ -552,6 +553,7 @@ begin
             CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_MEMORY_ADDRESS_REGISTER_HIGH_TO_DATA_BUS                                     <='0';
             CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_MEMORY_ADDRESS_REGISTER_TO_ADDRESS_BUS                                       <='0';
         
+            CONTROL_SIGNAL_INTERRUPT_HANDLER_RESET                                                                         <='1';
         elsif (INTERCONECT_STEP_COUNTER_OUT_TO_INSTRUCTION_DECODER_IN = "00000" and INTERCONECT_INTERRUPT_HANDLER_IRQ_PENDING_OUT_TO_INSTRUCTION_DECODER_IN = '1') then
             CONTROL_SIGNAL_READ_OR_WRITE                                                             <= '1';
             CONTROL_SIGNAL_ACCESSING_MEMORY                                                          <= '1';
@@ -602,6 +604,8 @@ begin
             CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_LOW_TO_DATA_BUS  <= '0';
             CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_HIGH_TO_DATA_BUS <= '0';
             IN_TRANSITION_TO_INTERRUPT                                                               <= '1';
+            CONTROL_SIGNAL_INTERRUPT_HANDLER_RESET                                                   <= '1';
+
         elsif (INTERCONECT_STEP_COUNTER_OUT_TO_INSTRUCTION_DECODER_IN = "00001" and IN_TRANSITION_TO_INTERRUPT = '1') then
             CONTROL_SIGNAL_READ_OR_WRITE                                                             <= '1';
             CONTROL_SIGNAL_ACCESSING_MEMORY                                                          <= '1';
@@ -651,6 +655,7 @@ begin
             CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_MEMORY_ADDRESS_REGISTER_TO_ADDRESS_BUS                 <= '0';
             CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_LOW_TO_DATA_BUS  <= '0';
             CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_HIGH_TO_DATA_BUS <= '0'; 
+            CONTROL_SIGNAL_INTERRUPT_HANDLER_RESET                                                   <= '0';
         elsif (INTERCONECT_STEP_COUNTER_OUT_TO_INSTRUCTION_DECODER_IN = "00010" and IN_TRANSITION_TO_INTERRUPT = '1') then
             CONTROL_SIGNAL_READ_OR_WRITE                                                             <= '0';
             CONTROL_SIGNAL_ACCESSING_MEMORY                                                          <= '1';
@@ -2023,7 +2028,8 @@ begin
             CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_MEMORY_ADDRESS_REGISTER_HIGH_TO_DATA_BUS               <= '0';
             CONTROL_SIGNAL_OUTPUT_ENABLE_FROM_MEMORY_ADDRESS_REGISTER_TO_ADDRESS_BUS                 <= '0';
             CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_LOW_TO_DATA_BUS  <= '0';
-            CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_HIGH_TO_DATA_BUS <= '0'; 
+            CONTROL_SIGNAL_INTERRUPT_HANDLER_OUTPUT_ENABLE_INTERRUPT_VECTOR_ADDRESS_HIGH_TO_DATA_BUS <= '0';
+            CONTROL_SIGNAL_INTERRUPT_HANDLER_RESET                                                   <= '0'; 
         elsif (INTERCONECT_STEP_COUNTER_OUT_TO_INSTRUCTION_DECODER_IN = "00001" and IN_TRANSITION_TO_INTERRUPT = '0') then
             CONTROL_SIGNAL_READ_OR_WRITE                                                             <= '1';
             CONTROL_SIGNAL_ACCESSING_MEMORY                                                          <= '1';

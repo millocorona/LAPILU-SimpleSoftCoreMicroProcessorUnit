@@ -49,8 +49,8 @@ begin
                 INTERRUPT_VECTOR_DATA_BUS_OUTPUT(i)<='0';
             end loop;            
        elsif OUTPUT_ENABLE_INTERRUPT_VECTOR_HIGH_TO_DATA_BUS = '1' then
-            INTERRUPT_VECTOR_DATA_BUS_OUTPUT(DATA_BUS_LENGTH)  <='0';
-            INTERRUPT_VECTOR_DATA_BUS_OUTPUT(DATA_BUS_LENGTH+1)<='0';
+            INTERRUPT_VECTOR_DATA_BUS_OUTPUT(0)  <='0';
+            INTERRUPT_VECTOR_DATA_BUS_OUTPUT(1)<='1';
             for i in 2 to DATA_BUS_LENGTH-1 loop
                 INTERRUPT_VECTOR_DATA_BUS_OUTPUT(i)<='0';
             end loop;
