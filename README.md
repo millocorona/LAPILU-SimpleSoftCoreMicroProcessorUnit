@@ -106,7 +106,7 @@ Here we need to explain two thing about how the buses work in LAPILU:
 
 <ol>
   <li>The data bus can be N-Bit but N needs to be an <b>even number greater or equal to 8</b> (Why? see the instruction register section).</li>
-  <li>The Address bus can be M-Bit but <b>M needs to be between N+1 and 2 times N </b> (N+1<=M<=2N) (Why? see the Program counter section and the stack pointer section).</li>
+  <li>The Address bus can be M-Bit but <b>M needs to be between N+2 and 2 times N </b> (N+2<=M<=2N) (Why? see the Program counter section, the stack pointer section, and the interrupts section).</li>
 </ol>
 
 ### Register X and Y
@@ -158,15 +158,15 @@ The purpose of this register is to store the value of the pointer to the stack.
 
 <b>But how the stack and the stack pointer works in LAPILU?</b>
 
-Well as you can see in the architecture diagram, <b> the stack pointer is only N bits long but its purpose is to save a memory address and it could be M bits long and M could be between N+1 and 2N</b> so, how it works?
+Well as you can see in the architecture diagram, <b> the stack pointer is only N bits long but its purpose is to save a memory address and it could be M bits long and M could be between N+2 and 2N</b> so, how it works?
 
 The answer is easy, the remaining most significant bits are assumed to be the decimal value 1 so for example, 
 considering an 8 bit data bus and an 16 bit address bus, the stack will be in the memory map 
 from 0x0100 to 0x01FF or in binary form
 <br>
-from 0000 0000 0000 0001 0000 0000 0000 0000 to 1111 1111 1111 1111 1111 1111 1111 1111 
+from 0000 0000 0000 0001 0000 0000 0000 0000 to 0000 0000 0000 0001 1111 1111 1111 1111 
 <br>
-Also, <b>thats why the minimum value of M is N+1 because we need at least one bit more than N to fix the stack to that part of the memory map</b>
+Also, <b>thats part of why the minimum value of M is N+2 because, at this point we need one more bit to fix the stack to that part of the memory map</b>
 
 The same rules applies to every other configuration of the buses.
 
@@ -257,8 +257,33 @@ LAPILU offers the following addressing modes:
 </ol>
 
 ## Interrupts
-  This is currently in the works
-  
+<i>An interrupt is an input signal to the processor indicating an event that needs immediate attention. An interrupt signal alerts the processor and serves as a request for the processor to interrupt the currently executing code, so that the event can be processed in a timely manner.</i>
+
+To indicate an interrupt to LAPILU the IRQ pin needs to go from 0 to 1, if the I flag is turned off (allowing interrupts), the CPU will complete the instruction that is currently executing, after that, it will push the values of the acumulator, register X , register Y, the processor status register, and program counter onto the stack, then, it will jump to the address located at the first memory address after the end of the stack (interrupt vector), and it will continue the execution from that point.
+<br>
+<br>
+To ilustrate the location of the interrupt vector lets see an example, assuming a CPU configuration of and 8 bit data bus and a 16 bit address bus, we already know that the stack is located from the address 0x0100 to 0x01FF or in binary form
+<br>
+<br>
+from 0000 0000 0000 0001 0000 0000 0000 0000 to 0000 0000 0000 0001 1111 1111 1111 1111 
+<br>
+<br>
+so, the interrupt vector will ve located at 0x0200 or in binary form
+<br>
+<br>
+0000 0000 0000 0010 0000 0000 0000 0000 
+<br>
+<br>
+Also, <b>thats why the minimum value of M is N+2 because,we need 2 more bits than the data bus to fix the interrupt vector to that direction in the memory map.</b> 
+<br>
+<br>
+As we previously mention, when an interrupt is triggered, the CPU will continue the program execution from the address 0x0200, thats until it finds a RETI instruction, when this instruction is executed, the CPU will return to the state that it had before the interrupt was triggered (popping from the stack the previous values), and it will continue with the execution of the program normally.
+<br>
+<br>
+Is worth saying that the CPU will stop listening to interrupts when an interrupt is already executing.
+<br>
+<br>
+<br>
 At this point we already finished the overview of the project, now more questions.
 
 ## What is being worked on, what things are already working and what things are missing?.
