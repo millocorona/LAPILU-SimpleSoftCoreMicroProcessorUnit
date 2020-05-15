@@ -180,7 +180,7 @@ determine wich step of the instruction is been executed
 The purpose of these register is to hold the binary representation of the instruction 
 we are currently executing and make it available to the instruction decoder so it can handle it.
 
-<b>This register has a fixed size of 8 bits, thats why the minimum size of the data bus needs to be 8.</b>
+<b>The binary OPCODES in LAPILU use 7 bits of this register, but is configured as the same size of the data bus, the even number closest to 7 is 8, that's why the minimum data bus size is 8 </b>
 
 ### Processor status register
 
