@@ -164,7 +164,7 @@ The answer is easy, the remaining most significant bits are assumed to be the de
 considering an 8 bit data bus and an 16 bit address bus, the stack will be in the memory map 
 from 0x0100 to 0x01FF or in binary form
 <br>
-from 0000 0000 0000 0001 0000 0000 0000 0000 to 0000 0000 0000 0001 1111 1111 1111 1111 
+from 0000 0001 0000 0000 to 0000 0001 1111 1111 
 <br>
 Also, <b>thats part of why the minimum value of M is N+2 because, at this point we need one more bit to fix the stack to that part of the memory map</b>
 
@@ -180,7 +180,7 @@ determine wich step of the instruction is been executed
 The purpose of these register is to hold the binary representation of the instruction 
 we are currently executing and make it available to the instruction decoder so it can handle it.
 
-<b>This register has a fixed size of 8 bits, thats why the minimum size of the data bus needs to be 8.</b>
+<b>The binary OPCODES in LAPILU use 7 bits of this register, but is configured as the same size of the data bus, the even number closest to 7 is 8, that's why the minimum data bus size is 8 </b>
 
 ### Processor status register
 
@@ -265,13 +265,13 @@ To indicate an interrupt to LAPILU the IRQ pin needs to go from 0 to 1, if the I
 To ilustrate the location of the interrupt vector lets see an example, assuming a CPU configuration of and 8 bit data bus and a 16 bit address bus, we already know that the stack is located from the address 0x0100 to 0x01FF or in binary form
 <br>
 <br>
-from 0000 0000 0000 0001 0000 0000 0000 0000 to 0000 0000 0000 0001 1111 1111 1111 1111 
+from 0000 0001 0000 0000 to 0000 0001 1111 1111 
 <br>
 <br>
 so, the interrupt vector will ve located at 0x0200 or in binary form
 <br>
 <br>
-0000 0000 0000 0010 0000 0000 0000 0000 
+0000 0010 0000 0000  
 <br>
 <br>
 Also, <b>thats why the minimum value of M is N+2 because,we need 2 more bits than the data bus to fix the interrupt vector to that direction in the memory map.</b> 
@@ -305,28 +305,13 @@ At this point we already finished the overview of the project, now more question
         <li>Instruction register</li>
         <li>Processor status register</li>
         <li>Instruction decoder (Control logic)</li>
+        <li>Interrupts</li>
     </ul>
   </li>
   <li>
     Things missing
       <ul>
-        <li>Interrupts</li>
-      </ul>
-  </li>
-  <li>
-    Things in the works
-      <ul>
-        <li>Interrupts</li>
-      </ul>
-  </li>
-  <li>
-    Things in the plan
-      <ul>
-        <li>
-            According to the original objective of the subject of computer architecture, 
-            our next step, once the CPU is complete, will be to create a microcontroller that uses this CPU.
-            The project will be called LALEXI
-        </li>
+        <li>None</li>
       </ul>
   </li>
 </ul>
