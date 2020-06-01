@@ -43,7 +43,7 @@ entity StackPointerRegister is
         DATA_OUTPUT_TO_DATA_BUS      : out std_logic_vector (DATA_BUS_LENGTH-1 downto 0);
         
         OUTPUT_ENABLE_TO_ADDRESS_BUS : in std_logic;
-        DATA_OUTPUT_TO_ADDRESS_BUS   : out std_logic_vector (ADDRESS_BUS_LENGTH-1 downto 0)
+        DATA_OUTPUT_TO_ADDRESS_BUS   : out std_logic_vector (ADDRESS_BUS_LENGTH-1 downto 0):=std_logic_vector(to_unsigned(0,ADDRESS_BUS_LENGTH))
     );
 end StackPointerRegister;
 

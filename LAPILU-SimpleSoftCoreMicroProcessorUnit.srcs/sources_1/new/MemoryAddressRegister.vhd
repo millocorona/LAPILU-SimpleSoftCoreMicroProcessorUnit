@@ -39,7 +39,7 @@ entity MemoryAddressRegister is
         DATA_BUS_OUTPUT         :out std_logic_vector(DATA_BUS_LENGTH-1 downto 0);
         
         OUTPUT_ENABLE_ADDRESS_BUS    :in  std_logic;
-        ADDRESS_BUS_OUTPUT           :out std_logic_vector(ADDRESS_BUS_LENGTH-1 downto 0)
+        ADDRESS_BUS_OUTPUT           :out std_logic_vector(ADDRESS_BUS_LENGTH-1 downto 0):=std_logic_vector(to_unsigned(0,ADDRESS_BUS_LENGTH))
         
     );
 end MemoryAddressRegister;
